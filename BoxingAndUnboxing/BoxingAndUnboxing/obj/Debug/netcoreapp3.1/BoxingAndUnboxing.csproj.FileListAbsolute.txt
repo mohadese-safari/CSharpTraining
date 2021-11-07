@@ -1,0 +1,14 @@
+F:\SG C# course\training\BoxingAndUnboxing\BoxingAndUnboxing\bin\Debug\netcoreapp3.1\BoxingAndUnboxing.exe
+F:\SG C# course\training\BoxingAndUnboxing\BoxingAndUnboxing\bin\Debug\netcoreapp3.1\BoxingAndUnboxing.deps.json
+F:\SG C# course\training\BoxingAndUnboxing\BoxingAndUnboxing\bin\Debug\netcoreapp3.1\BoxingAndUnboxing.runtimeconfig.json
+F:\SG C# course\training\BoxingAndUnboxing\BoxingAndUnboxing\bin\Debug\netcoreapp3.1\BoxingAndUnboxing.runtimeconfig.dev.json
+F:\SG C# course\training\BoxingAndUnboxing\BoxingAndUnboxing\bin\Debug\netcoreapp3.1\BoxingAndUnboxing.dll
+F:\SG C# course\training\BoxingAndUnboxing\BoxingAndUnboxing\bin\Debug\netcoreapp3.1\BoxingAndUnboxing.pdb
+F:\SG C# course\training\BoxingAndUnboxing\BoxingAndUnboxing\obj\Debug\netcoreapp3.1\BoxingAndUnboxing.csproj.AssemblyReference.cache
+F:\SG C# course\training\BoxingAndUnboxing\BoxingAndUnboxing\obj\Debug\netcoreapp3.1\BoxingAndUnboxing.GeneratedMSBuildEditorConfig.editorconfig
+F:\SG C# course\training\BoxingAndUnboxing\BoxingAndUnboxing\obj\Debug\netcoreapp3.1\BoxingAndUnboxing.AssemblyInfoInputs.cache
+F:\SG C# course\training\BoxingAndUnboxing\BoxingAndUnboxing\obj\Debug\netcoreapp3.1\BoxingAndUnboxing.AssemblyInfo.cs
+F:\SG C# course\training\BoxingAndUnboxing\BoxingAndUnboxing\obj\Debug\netcoreapp3.1\BoxingAndUnboxing.csproj.CoreCompileInputs.cache
+F:\SG C# course\training\BoxingAndUnboxing\BoxingAndUnboxing\obj\Debug\netcoreapp3.1\BoxingAndUnboxing.dll
+F:\SG C# course\training\BoxingAndUnboxing\BoxingAndUnboxing\obj\Debug\netcoreapp3.1\BoxingAndUnboxing.pdb
+F:\SG C# course\training\BoxingAndUnboxing\BoxingAndUnboxing\obj\Debug\netcoreapp3.1\BoxingAndUnboxing.genruntimeconfig.cache

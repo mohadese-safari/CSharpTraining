@@ -1,0 +1,14 @@
+F:\SG C# course\training\StructsSample\StructsSample\bin\Debug\netcoreapp3.1\StructsSample.exe
+F:\SG C# course\training\StructsSample\StructsSample\bin\Debug\netcoreapp3.1\StructsSample.deps.json
+F:\SG C# course\training\StructsSample\StructsSample\bin\Debug\netcoreapp3.1\StructsSample.runtimeconfig.json
+F:\SG C# course\training\StructsSample\StructsSample\bin\Debug\netcoreapp3.1\StructsSample.runtimeconfig.dev.json
+F:\SG C# course\training\StructsSample\StructsSample\bin\Debug\netcoreapp3.1\StructsSample.dll
+F:\SG C# course\training\StructsSample\StructsSample\bin\Debug\netcoreapp3.1\StructsSample.pdb
+F:\SG C# course\training\StructsSample\StructsSample\obj\Debug\netcoreapp3.1\StructsSample.csproj.AssemblyReference.cache
+F:\SG C# course\training\StructsSample\StructsSample\obj\Debug\netcoreapp3.1\StructsSample.GeneratedMSBuildEditorConfig.editorconfig
+F:\SG C# course\training\StructsSample\StructsSample\obj\Debug\netcoreapp3.1\StructsSample.AssemblyInfoInputs.cache
+F:\SG C# course\training\StructsSample\StructsSample\obj\Debug\netcoreapp3.1\StructsSample.AssemblyInfo.cs
+F:\SG C# course\training\StructsSample\StructsSample\obj\Debug\netcoreapp3.1\StructsSample.csproj.CoreCompileInputs.cache
+F:\SG C# course\training\StructsSample\StructsSample\obj\Debug\netcoreapp3.1\StructsSample.dll
+F:\SG C# course\training\StructsSample\StructsSample\obj\Debug\netcoreapp3.1\StructsSample.pdb
+F:\SG C# course\training\StructsSample\StructsSample\obj\Debug\netcoreapp3.1\StructsSample.genruntimeconfig.cache

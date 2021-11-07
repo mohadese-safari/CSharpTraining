@@ -1,0 +1,10 @@
+F:\SG C# course\training\MyPaintApp\MyPaintApp\bin\Debug\MyPaintApp.exe.config
+F:\SG C# course\training\MyPaintApp\MyPaintApp\bin\Debug\MyPaintApp.exe
+F:\SG C# course\training\MyPaintApp\MyPaintApp\bin\Debug\MyPaintApp.pdb
+F:\SG C# course\training\MyPaintApp\MyPaintApp\obj\Debug\MyPaintApp.csproj.AssemblyReference.cache
+F:\SG C# course\training\MyPaintApp\MyPaintApp\obj\Debug\MyPaintApp.Form1.resources
+F:\SG C# course\training\MyPaintApp\MyPaintApp\obj\Debug\MyPaintApp.Properties.Resources.resources
+F:\SG C# course\training\MyPaintApp\MyPaintApp\obj\Debug\MyPaintApp.csproj.GenerateResource.cache
+F:\SG C# course\training\MyPaintApp\MyPaintApp\obj\Debug\MyPaintApp.csproj.CoreCompileInputs.cache
+F:\SG C# course\training\MyPaintApp\MyPaintApp\obj\Debug\MyPaintApp.exe
+F:\SG C# course\training\MyPaintApp\MyPaintApp\obj\Debug\MyPaintApp.pdb

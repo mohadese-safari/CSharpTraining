@@ -1,0 +1,13 @@
+F:\SG C# course\training\Exercise1\Q1\bin\Debug\netcoreapp3.1\Q1.exe
+F:\SG C# course\training\Exercise1\Q1\bin\Debug\netcoreapp3.1\Q1.deps.json
+F:\SG C# course\training\Exercise1\Q1\bin\Debug\netcoreapp3.1\Q1.runtimeconfig.json
+F:\SG C# course\training\Exercise1\Q1\bin\Debug\netcoreapp3.1\Q1.runtimeconfig.dev.json
+F:\SG C# course\training\Exercise1\Q1\bin\Debug\netcoreapp3.1\Q1.dll
+F:\SG C# course\training\Exercise1\Q1\bin\Debug\netcoreapp3.1\Q1.pdb
+F:\SG C# course\training\Exercise1\Q1\obj\Debug\netcoreapp3.1\Q1.GeneratedMSBuildEditorConfig.editorconfig
+F:\SG C# course\training\Exercise1\Q1\obj\Debug\netcoreapp3.1\Q1.AssemblyInfoInputs.cache
+F:\SG C# course\training\Exercise1\Q1\obj\Debug\netcoreapp3.1\Q1.AssemblyInfo.cs
+F:\SG C# course\training\Exercise1\Q1\obj\Debug\netcoreapp3.1\Q1.csproj.CoreCompileInputs.cache
+F:\SG C# course\training\Exercise1\Q1\obj\Debug\netcoreapp3.1\Q1.dll
+F:\SG C# course\training\Exercise1\Q1\obj\Debug\netcoreapp3.1\Q1.pdb
+F:\SG C# course\training\Exercise1\Q1\obj\Debug\netcoreapp3.1\Q1.genruntimeconfig.cache

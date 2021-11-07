@@ -1,0 +1,13 @@
+F:\SG C# course\training\Exercise1\StringReverse\bin\Debug\netcoreapp3.1\StringReverse.exe
+F:\SG C# course\training\Exercise1\StringReverse\bin\Debug\netcoreapp3.1\StringReverse.deps.json
+F:\SG C# course\training\Exercise1\StringReverse\bin\Debug\netcoreapp3.1\StringReverse.runtimeconfig.json
+F:\SG C# course\training\Exercise1\StringReverse\bin\Debug\netcoreapp3.1\StringReverse.runtimeconfig.dev.json
+F:\SG C# course\training\Exercise1\StringReverse\bin\Debug\netcoreapp3.1\StringReverse.dll
+F:\SG C# course\training\Exercise1\StringReverse\bin\Debug\netcoreapp3.1\StringReverse.pdb
+F:\SG C# course\training\Exercise1\StringReverse\obj\Debug\netcoreapp3.1\StringReverse.GeneratedMSBuildEditorConfig.editorconfig
+F:\SG C# course\training\Exercise1\StringReverse\obj\Debug\netcoreapp3.1\StringReverse.AssemblyInfoInputs.cache
+F:\SG C# course\training\Exercise1\StringReverse\obj\Debug\netcoreapp3.1\StringReverse.AssemblyInfo.cs
+F:\SG C# course\training\Exercise1\StringReverse\obj\Debug\netcoreapp3.1\StringReverse.csproj.CoreCompileInputs.cache
+F:\SG C# course\training\Exercise1\StringReverse\obj\Debug\netcoreapp3.1\StringReverse.dll
+F:\SG C# course\training\Exercise1\StringReverse\obj\Debug\netcoreapp3.1\StringReverse.pdb
+F:\SG C# course\training\Exercise1\StringReverse\obj\Debug\netcoreapp3.1\StringReverse.genruntimeconfig.cache

@@ -1,0 +1,14 @@
+F:\SG C# course\training\Exercise1\ConvertIntegerToString\bin\Debug\netcoreapp3.1\ConvertIntegerToString.exe
+F:\SG C# course\training\Exercise1\ConvertIntegerToString\bin\Debug\netcoreapp3.1\ConvertIntegerToString.deps.json
+F:\SG C# course\training\Exercise1\ConvertIntegerToString\bin\Debug\netcoreapp3.1\ConvertIntegerToString.runtimeconfig.json
+F:\SG C# course\training\Exercise1\ConvertIntegerToString\bin\Debug\netcoreapp3.1\ConvertIntegerToString.runtimeconfig.dev.json
+F:\SG C# course\training\Exercise1\ConvertIntegerToString\bin\Debug\netcoreapp3.1\ConvertIntegerToString.dll
+F:\SG C# course\training\Exercise1\ConvertIntegerToString\bin\Debug\netcoreapp3.1\ConvertIntegerToString.pdb
+F:\SG C# course\training\Exercise1\ConvertIntegerToString\obj\Debug\netcoreapp3.1\ConvertIntegerToString.csproj.AssemblyReference.cache
+F:\SG C# course\training\Exercise1\ConvertIntegerToString\obj\Debug\netcoreapp3.1\ConvertIntegerToString.GeneratedMSBuildEditorConfig.editorconfig
+F:\SG C# course\training\Exercise1\ConvertIntegerToString\obj\Debug\netcoreapp3.1\ConvertIntegerToString.AssemblyInfoInputs.cache
+F:\SG C# course\training\Exercise1\ConvertIntegerToString\obj\Debug\netcoreapp3.1\ConvertIntegerToString.AssemblyInfo.cs
+F:\SG C# course\training\Exercise1\ConvertIntegerToString\obj\Debug\netcoreapp3.1\ConvertIntegerToString.csproj.CoreCompileInputs.cache
+F:\SG C# course\training\Exercise1\ConvertIntegerToString\obj\Debug\netcoreapp3.1\ConvertIntegerToString.dll
+F:\SG C# course\training\Exercise1\ConvertIntegerToString\obj\Debug\netcoreapp3.1\ConvertIntegerToString.pdb
+F:\SG C# course\training\Exercise1\ConvertIntegerToString\obj\Debug\netcoreapp3.1\ConvertIntegerToString.genruntimeconfig.cache

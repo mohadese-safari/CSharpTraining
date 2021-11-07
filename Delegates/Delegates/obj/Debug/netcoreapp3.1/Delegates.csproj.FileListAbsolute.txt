@@ -1,0 +1,14 @@
+F:\SG C# course\training\Delegates\Delegates\bin\Debug\netcoreapp3.1\Delegates.exe
+F:\SG C# course\training\Delegates\Delegates\bin\Debug\netcoreapp3.1\Delegates.deps.json
+F:\SG C# course\training\Delegates\Delegates\bin\Debug\netcoreapp3.1\Delegates.runtimeconfig.json
+F:\SG C# course\training\Delegates\Delegates\bin\Debug\netcoreapp3.1\Delegates.runtimeconfig.dev.json
+F:\SG C# course\training\Delegates\Delegates\bin\Debug\netcoreapp3.1\Delegates.dll
+F:\SG C# course\training\Delegates\Delegates\bin\Debug\netcoreapp3.1\Delegates.pdb
+F:\SG C# course\training\Delegates\Delegates\obj\Debug\netcoreapp3.1\Delegates.csproj.AssemblyReference.cache
+F:\SG C# course\training\Delegates\Delegates\obj\Debug\netcoreapp3.1\Delegates.GeneratedMSBuildEditorConfig.editorconfig
+F:\SG C# course\training\Delegates\Delegates\obj\Debug\netcoreapp3.1\Delegates.AssemblyInfoInputs.cache
+F:\SG C# course\training\Delegates\Delegates\obj\Debug\netcoreapp3.1\Delegates.AssemblyInfo.cs
+F:\SG C# course\training\Delegates\Delegates\obj\Debug\netcoreapp3.1\Delegates.csproj.CoreCompileInputs.cache
+F:\SG C# course\training\Delegates\Delegates\obj\Debug\netcoreapp3.1\Delegates.dll
+F:\SG C# course\training\Delegates\Delegates\obj\Debug\netcoreapp3.1\Delegates.pdb
+F:\SG C# course\training\Delegates\Delegates\obj\Debug\netcoreapp3.1\Delegates.genruntimeconfig.cache

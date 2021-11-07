@@ -1,0 +1,14 @@
+F:\SG C# course\training\GenericTypes\GenericTypes\bin\Debug\netcoreapp3.1\GenericTypes.exe
+F:\SG C# course\training\GenericTypes\GenericTypes\bin\Debug\netcoreapp3.1\GenericTypes.deps.json
+F:\SG C# course\training\GenericTypes\GenericTypes\bin\Debug\netcoreapp3.1\GenericTypes.runtimeconfig.json
+F:\SG C# course\training\GenericTypes\GenericTypes\bin\Debug\netcoreapp3.1\GenericTypes.runtimeconfig.dev.json
+F:\SG C# course\training\GenericTypes\GenericTypes\bin\Debug\netcoreapp3.1\GenericTypes.dll
+F:\SG C# course\training\GenericTypes\GenericTypes\bin\Debug\netcoreapp3.1\GenericTypes.pdb
+F:\SG C# course\training\GenericTypes\GenericTypes\obj\Debug\netcoreapp3.1\GenericTypes.csproj.AssemblyReference.cache
+F:\SG C# course\training\GenericTypes\GenericTypes\obj\Debug\netcoreapp3.1\GenericTypes.GeneratedMSBuildEditorConfig.editorconfig
+F:\SG C# course\training\GenericTypes\GenericTypes\obj\Debug\netcoreapp3.1\GenericTypes.AssemblyInfoInputs.cache
+F:\SG C# course\training\GenericTypes\GenericTypes\obj\Debug\netcoreapp3.1\GenericTypes.AssemblyInfo.cs
+F:\SG C# course\training\GenericTypes\GenericTypes\obj\Debug\netcoreapp3.1\GenericTypes.csproj.CoreCompileInputs.cache
+F:\SG C# course\training\GenericTypes\GenericTypes\obj\Debug\netcoreapp3.1\GenericTypes.dll
+F:\SG C# course\training\GenericTypes\GenericTypes\obj\Debug\netcoreapp3.1\GenericTypes.pdb
+F:\SG C# course\training\GenericTypes\GenericTypes\obj\Debug\netcoreapp3.1\GenericTypes.genruntimeconfig.cache

@@ -1,0 +1,13 @@
+F:\SG C# course\training\FindFileName\FindFile\FindFile\bin\Debug\netcoreapp3.1\FindFile.exe
+F:\SG C# course\training\FindFileName\FindFile\FindFile\bin\Debug\netcoreapp3.1\FindFile.deps.json
+F:\SG C# course\training\FindFileName\FindFile\FindFile\bin\Debug\netcoreapp3.1\FindFile.runtimeconfig.json
+F:\SG C# course\training\FindFileName\FindFile\FindFile\bin\Debug\netcoreapp3.1\FindFile.runtimeconfig.dev.json
+F:\SG C# course\training\FindFileName\FindFile\FindFile\bin\Debug\netcoreapp3.1\FindFile.dll
+F:\SG C# course\training\FindFileName\FindFile\FindFile\bin\Debug\netcoreapp3.1\FindFile.pdb
+F:\SG C# course\training\FindFileName\FindFile\FindFile\obj\Debug\netcoreapp3.1\FindFile.GeneratedMSBuildEditorConfig.editorconfig
+F:\SG C# course\training\FindFileName\FindFile\FindFile\obj\Debug\netcoreapp3.1\FindFile.AssemblyInfoInputs.cache
+F:\SG C# course\training\FindFileName\FindFile\FindFile\obj\Debug\netcoreapp3.1\FindFile.AssemblyInfo.cs
+F:\SG C# course\training\FindFileName\FindFile\FindFile\obj\Debug\netcoreapp3.1\FindFile.csproj.CoreCompileInputs.cache
+F:\SG C# course\training\FindFileName\FindFile\FindFile\obj\Debug\netcoreapp3.1\FindFile.dll
+F:\SG C# course\training\FindFileName\FindFile\FindFile\obj\Debug\netcoreapp3.1\FindFile.pdb
+F:\SG C# course\training\FindFileName\FindFile\FindFile\obj\Debug\netcoreapp3.1\FindFile.genruntimeconfig.cache

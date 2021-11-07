@@ -1,0 +1,14 @@
+F:\SG C# course\training\NestedTypes\NestedTypes\bin\Debug\netcoreapp3.1\NestedTypes.exe
+F:\SG C# course\training\NestedTypes\NestedTypes\bin\Debug\netcoreapp3.1\NestedTypes.deps.json
+F:\SG C# course\training\NestedTypes\NestedTypes\bin\Debug\netcoreapp3.1\NestedTypes.runtimeconfig.json
+F:\SG C# course\training\NestedTypes\NestedTypes\bin\Debug\netcoreapp3.1\NestedTypes.runtimeconfig.dev.json
+F:\SG C# course\training\NestedTypes\NestedTypes\bin\Debug\netcoreapp3.1\NestedTypes.dll
+F:\SG C# course\training\NestedTypes\NestedTypes\bin\Debug\netcoreapp3.1\NestedTypes.pdb
+F:\SG C# course\training\NestedTypes\NestedTypes\obj\Debug\netcoreapp3.1\NestedTypes.csproj.AssemblyReference.cache
+F:\SG C# course\training\NestedTypes\NestedTypes\obj\Debug\netcoreapp3.1\NestedTypes.GeneratedMSBuildEditorConfig.editorconfig
+F:\SG C# course\training\NestedTypes\NestedTypes\obj\Debug\netcoreapp3.1\NestedTypes.AssemblyInfoInputs.cache
+F:\SG C# course\training\NestedTypes\NestedTypes\obj\Debug\netcoreapp3.1\NestedTypes.AssemblyInfo.cs
+F:\SG C# course\training\NestedTypes\NestedTypes\obj\Debug\netcoreapp3.1\NestedTypes.csproj.CoreCompileInputs.cache
+F:\SG C# course\training\NestedTypes\NestedTypes\obj\Debug\netcoreapp3.1\NestedTypes.dll
+F:\SG C# course\training\NestedTypes\NestedTypes\obj\Debug\netcoreapp3.1\NestedTypes.pdb
+F:\SG C# course\training\NestedTypes\NestedTypes\obj\Debug\netcoreapp3.1\NestedTypes.genruntimeconfig.cache

@@ -1,0 +1,10 @@
+F:\SG C# course\training\StarLine\StarLine\bin\Debug\StarLine.exe.config
+F:\SG C# course\training\StarLine\StarLine\bin\Debug\StarLine.exe
+F:\SG C# course\training\StarLine\StarLine\bin\Debug\StarLine.pdb
+F:\SG C# course\training\StarLine\StarLine\obj\Debug\StarLine.csproj.AssemblyReference.cache
+F:\SG C# course\training\StarLine\StarLine\obj\Debug\StarLine.Properties.Resources.resources
+F:\SG C# course\training\StarLine\StarLine\obj\Debug\StarLine.csproj.GenerateResource.cache
+F:\SG C# course\training\StarLine\StarLine\obj\Debug\StarLine.csproj.CoreCompileInputs.cache
+F:\SG C# course\training\StarLine\StarLine\obj\Debug\StarLine.exe
+F:\SG C# course\training\StarLine\StarLine\obj\Debug\StarLine.pdb
+F:\SG C# course\training\StarLine\StarLine\obj\Debug\StarLine.Form1.resources

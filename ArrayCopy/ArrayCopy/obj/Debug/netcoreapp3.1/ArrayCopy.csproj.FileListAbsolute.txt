@@ -1,0 +1,13 @@
+F:\SG C# course\training\ArrayCopy\ArrayCopy\bin\Debug\netcoreapp3.1\ArrayCopy.exe
+F:\SG C# course\training\ArrayCopy\ArrayCopy\bin\Debug\netcoreapp3.1\ArrayCopy.deps.json
+F:\SG C# course\training\ArrayCopy\ArrayCopy\bin\Debug\netcoreapp3.1\ArrayCopy.runtimeconfig.json
+F:\SG C# course\training\ArrayCopy\ArrayCopy\bin\Debug\netcoreapp3.1\ArrayCopy.runtimeconfig.dev.json
+F:\SG C# course\training\ArrayCopy\ArrayCopy\bin\Debug\netcoreapp3.1\ArrayCopy.dll
+F:\SG C# course\training\ArrayCopy\ArrayCopy\bin\Debug\netcoreapp3.1\ArrayCopy.pdb
+F:\SG C# course\training\ArrayCopy\ArrayCopy\obj\Debug\netcoreapp3.1\ArrayCopy.GeneratedMSBuildEditorConfig.editorconfig
+F:\SG C# course\training\ArrayCopy\ArrayCopy\obj\Debug\netcoreapp3.1\ArrayCopy.AssemblyInfoInputs.cache
+F:\SG C# course\training\ArrayCopy\ArrayCopy\obj\Debug\netcoreapp3.1\ArrayCopy.AssemblyInfo.cs
+F:\SG C# course\training\ArrayCopy\ArrayCopy\obj\Debug\netcoreapp3.1\ArrayCopy.csproj.CoreCompileInputs.cache
+F:\SG C# course\training\ArrayCopy\ArrayCopy\obj\Debug\netcoreapp3.1\ArrayCopy.dll
+F:\SG C# course\training\ArrayCopy\ArrayCopy\obj\Debug\netcoreapp3.1\ArrayCopy.pdb
+F:\SG C# course\training\ArrayCopy\ArrayCopy\obj\Debug\netcoreapp3.1\ArrayCopy.genruntimeconfig.cache

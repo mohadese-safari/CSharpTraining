@@ -1,0 +1,15 @@
+F:\SG C# course\training\Store\Store\bin\Debug\Store.exe.config
+F:\SG C# course\training\Store\Store\bin\Debug\Store.exe
+F:\SG C# course\training\Store\Store\bin\Debug\Store.pdb
+F:\SG C# course\training\Store\Store\bin\Debug\EntityFramework.dll
+F:\SG C# course\training\Store\Store\bin\Debug\EntityFramework.SqlServer.dll
+F:\SG C# course\training\Store\Store\bin\Debug\EntityFramework.xml
+F:\SG C# course\training\Store\Store\bin\Debug\EntityFramework.SqlServer.xml
+F:\SG C# course\training\Store\Store\obj\Debug\Store.csproj.AssemblyReference.cache
+F:\SG C# course\training\Store\Store\obj\Debug\Store.Properties.Resources.resources
+F:\SG C# course\training\Store\Store\obj\Debug\Store.csproj.GenerateResource.cache
+F:\SG C# course\training\Store\Store\obj\Debug\Store.csproj.CoreCompileInputs.cache
+F:\SG C# course\training\Store\Store\obj\Debug\Store.exe
+F:\SG C# course\training\Store\Store\obj\Debug\Store.pdb
+F:\SG C# course\training\Store\Store\obj\Debug\Store.Migrations.InitialCreate.resources
+F:\SG C# course\training\Store\Store\obj\Debug\Store.Migrations.AddNickNameToCustomer.resources

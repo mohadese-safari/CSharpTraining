@@ -1,0 +1,14 @@
+F:\SG C# course\training\ConsoleApp1\ConsoleApp1\bin\Debug\netcoreapp3.1\IntConversionToUint.exe
+F:\SG C# course\training\ConsoleApp1\ConsoleApp1\bin\Debug\netcoreapp3.1\IntConversionToUint.deps.json
+F:\SG C# course\training\ConsoleApp1\ConsoleApp1\bin\Debug\netcoreapp3.1\IntConversionToUint.runtimeconfig.json
+F:\SG C# course\training\ConsoleApp1\ConsoleApp1\bin\Debug\netcoreapp3.1\IntConversionToUint.runtimeconfig.dev.json
+F:\SG C# course\training\ConsoleApp1\ConsoleApp1\bin\Debug\netcoreapp3.1\IntConversionToUint.dll
+F:\SG C# course\training\ConsoleApp1\ConsoleApp1\bin\Debug\netcoreapp3.1\IntConversionToUint.pdb
+F:\SG C# course\training\ConsoleApp1\ConsoleApp1\obj\Debug\netcoreapp3.1\IntConversionToUint.csproj.AssemblyReference.cache
+F:\SG C# course\training\ConsoleApp1\ConsoleApp1\obj\Debug\netcoreapp3.1\IntConversionToUint.GeneratedMSBuildEditorConfig.editorconfig
+F:\SG C# course\training\ConsoleApp1\ConsoleApp1\obj\Debug\netcoreapp3.1\IntConversionToUint.AssemblyInfoInputs.cache
+F:\SG C# course\training\ConsoleApp1\ConsoleApp1\obj\Debug\netcoreapp3.1\IntConversionToUint.AssemblyInfo.cs
+F:\SG C# course\training\ConsoleApp1\ConsoleApp1\obj\Debug\netcoreapp3.1\IntConversionToUint.csproj.CoreCompileInputs.cache
+F:\SG C# course\training\ConsoleApp1\ConsoleApp1\obj\Debug\netcoreapp3.1\IntConversionToUint.dll
+F:\SG C# course\training\ConsoleApp1\ConsoleApp1\obj\Debug\netcoreapp3.1\IntConversionToUint.pdb
+F:\SG C# course\training\ConsoleApp1\ConsoleApp1\obj\Debug\netcoreapp3.1\IntConversionToUint.genruntimeconfig.cache

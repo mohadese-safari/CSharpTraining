@@ -1,0 +1,14 @@
+F:\SG C# course\training\MethodsDefaultParameters\MethodsDefaultParameters\bin\Debug\netcoreapp3.1\MethodsDefaultParameters.exe
+F:\SG C# course\training\MethodsDefaultParameters\MethodsDefaultParameters\bin\Debug\netcoreapp3.1\MethodsDefaultParameters.deps.json
+F:\SG C# course\training\MethodsDefaultParameters\MethodsDefaultParameters\bin\Debug\netcoreapp3.1\MethodsDefaultParameters.runtimeconfig.json
+F:\SG C# course\training\MethodsDefaultParameters\MethodsDefaultParameters\bin\Debug\netcoreapp3.1\MethodsDefaultParameters.runtimeconfig.dev.json
+F:\SG C# course\training\MethodsDefaultParameters\MethodsDefaultParameters\bin\Debug\netcoreapp3.1\MethodsDefaultParameters.dll
+F:\SG C# course\training\MethodsDefaultParameters\MethodsDefaultParameters\bin\Debug\netcoreapp3.1\MethodsDefaultParameters.pdb
+F:\SG C# course\training\MethodsDefaultParameters\MethodsDefaultParameters\obj\Debug\netcoreapp3.1\MethodsDefaultParameters.csproj.AssemblyReference.cache
+F:\SG C# course\training\MethodsDefaultParameters\MethodsDefaultParameters\obj\Debug\netcoreapp3.1\MethodsDefaultParameters.GeneratedMSBuildEditorConfig.editorconfig
+F:\SG C# course\training\MethodsDefaultParameters\MethodsDefaultParameters\obj\Debug\netcoreapp3.1\MethodsDefaultParameters.AssemblyInfoInputs.cache
+F:\SG C# course\training\MethodsDefaultParameters\MethodsDefaultParameters\obj\Debug\netcoreapp3.1\MethodsDefaultParameters.AssemblyInfo.cs
+F:\SG C# course\training\MethodsDefaultParameters\MethodsDefaultParameters\obj\Debug\netcoreapp3.1\MethodsDefaultParameters.csproj.CoreCompileInputs.cache
+F:\SG C# course\training\MethodsDefaultParameters\MethodsDefaultParameters\obj\Debug\netcoreapp3.1\MethodsDefaultParameters.dll
+F:\SG C# course\training\MethodsDefaultParameters\MethodsDefaultParameters\obj\Debug\netcoreapp3.1\MethodsDefaultParameters.pdb
+F:\SG C# course\training\MethodsDefaultParameters\MethodsDefaultParameters\obj\Debug\netcoreapp3.1\MethodsDefaultParameters.genruntimeconfig.cache

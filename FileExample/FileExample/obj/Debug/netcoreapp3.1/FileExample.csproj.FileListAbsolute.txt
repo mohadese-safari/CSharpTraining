@@ -1,0 +1,14 @@
+F:\SG C# course\training\FileExample\FileExample\bin\Debug\netcoreapp3.1\FileExample.exe
+F:\SG C# course\training\FileExample\FileExample\bin\Debug\netcoreapp3.1\FileExample.deps.json
+F:\SG C# course\training\FileExample\FileExample\bin\Debug\netcoreapp3.1\FileExample.runtimeconfig.json
+F:\SG C# course\training\FileExample\FileExample\bin\Debug\netcoreapp3.1\FileExample.runtimeconfig.dev.json
+F:\SG C# course\training\FileExample\FileExample\bin\Debug\netcoreapp3.1\FileExample.dll
+F:\SG C# course\training\FileExample\FileExample\bin\Debug\netcoreapp3.1\FileExample.pdb
+F:\SG C# course\training\FileExample\FileExample\obj\Debug\netcoreapp3.1\FileExample.csproj.AssemblyReference.cache
+F:\SG C# course\training\FileExample\FileExample\obj\Debug\netcoreapp3.1\FileExample.GeneratedMSBuildEditorConfig.editorconfig
+F:\SG C# course\training\FileExample\FileExample\obj\Debug\netcoreapp3.1\FileExample.AssemblyInfoInputs.cache
+F:\SG C# course\training\FileExample\FileExample\obj\Debug\netcoreapp3.1\FileExample.AssemblyInfo.cs
+F:\SG C# course\training\FileExample\FileExample\obj\Debug\netcoreapp3.1\FileExample.csproj.CoreCompileInputs.cache
+F:\SG C# course\training\FileExample\FileExample\obj\Debug\netcoreapp3.1\FileExample.dll
+F:\SG C# course\training\FileExample\FileExample\obj\Debug\netcoreapp3.1\FileExample.pdb
+F:\SG C# course\training\FileExample\FileExample\obj\Debug\netcoreapp3.1\FileExample.genruntimeconfig.cache
