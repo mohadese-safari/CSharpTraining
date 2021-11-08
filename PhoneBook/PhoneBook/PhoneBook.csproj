@@ -7,7 +7,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{32C3A663-23F7-4667-B27B-B036D07F39E3}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>PhoneBook</RootNamespace>
+    <RootNamespace>PhoneBookApp</RootNamespace>
     <AssemblyName>PhoneBook</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -15,6 +15,7 @@
     <Deterministic>true</Deterministic>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -25,6 +26,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -34,6 +36,10 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
@@ -59,12 +65,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="View\ContactDetail.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\ContactDetail.Designer.cs">
-      <DependentUpon>ContactDetail.cs</DependentUpon>
-    </Compile>
+    <Compile Include="Model\PhoneBookExceptions.cs" />
     <Compile Include="View\ContactCrudForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,9 +94,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="Model\SuggestingLabel.cs" />
-    <EmbeddedResource Include="View\ContactDetail.resx">
-      <DependentUpon>ContactDetail.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="View\PhoneBookForm.resx">
       <DependentUpon>PhoneBookForm.cs</DependentUpon>
     </EmbeddedResource>

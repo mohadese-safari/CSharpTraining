@@ -6,13 +6,46 @@ namespace Delegates
     class Program
     {
         public delegate int NumberOperation(int a, int b);
-        public delegate int SequentialNumberOperation(int a,int b);
+        public delegate int SequentialNumberOperation(int a, int b);
         static void Main(string[] args)
         {
-            NumberOperation numberOperation = Multiply;
-            Console.WriteLine(numberOperation(1,8));
-            SequentialNumberOperation ops = new SequentialNumberOperation(Add) + new SequentialNumberOperation(Multiply);
+            //Beginner
+            //NumberOperation numberOperation = Multiply;
+            //Console.WriteLine(numberOperation(1, 8));
+            //SequentialNumberOperation ops = new SequentialNumberOperation(Add) + new SequentialNumberOperation(Multiply);
+
+            //Advanced
+            Func<int, bool> isEven = (int i) => i % 2 == 0;
+
+            int i = 1;
+            Action loopTest = new Action(
+                () => Console.WriteLine(i)
+                );
+            for ( i = 1; i < 10; i++)
+            {
+                loopTest += delegate ()
+                {
+                    Console.WriteLine(i);
+                };
+                loopTest();
+            }
+            i += 10;
+            loopTest();
             
+
+            //Using lambda
+            //Action loopTest2 = new Action(
+            //    () => Console.WriteLine(1)
+            //    );
+            //for ( i = 1; i < 10; i++)
+            //{
+            //    loopTest2 += () =>
+            //    {
+            //        Console.WriteLine(i);
+            //    };
+            //}
+            //loopTest2();
+
         }
 
         public static int Add(int a, int b)
@@ -24,6 +57,11 @@ namespace Delegates
         {
             return a * b;
         }
+
+        public static void sayHi(int i)
+        {
+            Console.WriteLine("hi" + i);
+        }
     }
-    
+
 }

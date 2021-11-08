@@ -1,0 +1,16 @@
+F:\SG C# course\training\PhoneBook\PhoneBook\bin\Debug\PhoneBook.exe.config
+F:\SG C# course\training\PhoneBook\PhoneBook\bin\Debug\PhoneBook.exe
+F:\SG C# course\training\PhoneBook\PhoneBook\bin\Debug\PhoneBook.pdb
+F:\SG C# course\training\PhoneBook\PhoneBook\obj\Debug\PhoneBook.csproj.AssemblyReference.cache
+F:\SG C# course\training\PhoneBook\PhoneBook\obj\Debug\PhoneBook.csproj.GenerateResource.cache
+F:\SG C# course\training\PhoneBook\PhoneBook\obj\Debug\PhoneBook.csproj.CoreCompileInputs.cache
+F:\SG C# course\training\PhoneBook\PhoneBook\obj\Debug\PhoneBook.exe
+F:\SG C# course\training\PhoneBook\PhoneBook\obj\Debug\PhoneBook.pdb
+F:\SG C# course\training\PhoneBook\PhoneBook\bin\Debug\EntityFramework.dll
+F:\SG C# course\training\PhoneBook\PhoneBook\bin\Debug\EntityFramework.SqlServer.dll
+F:\SG C# course\training\PhoneBook\PhoneBook\bin\Debug\EntityFramework.xml
+F:\SG C# course\training\PhoneBook\PhoneBook\bin\Debug\EntityFramework.SqlServer.xml
+F:\SG C# course\training\PhoneBook\PhoneBook\obj\Debug\PhoneBookApp.View.ContactDetail.resources
+F:\SG C# course\training\PhoneBook\PhoneBook\obj\Debug\PhoneBookApp.View.ContactCrudForm.resources
+F:\SG C# course\training\PhoneBook\PhoneBook\obj\Debug\PhoneBookApp.View.PhoneBookForm.resources
+F:\SG C# course\training\PhoneBook\PhoneBook\obj\Debug\PhoneBookApp.Properties.Resources.resources

@@ -15,7 +15,7 @@ namespace PhoneBookApp.View
 {
     public partial class ContactCrudForm : Form
     {
-        readonly Bitmap defaultAvatar = global::PhoneBook.Properties.Resources.avatar_default_icon;
+        readonly Bitmap defaultAvatar = global::PhoneBookApp.Properties.Resources.avatar_default_icon;
 
         private Contact CurrentContact { get; set; }
         public ContactCrudForm(Contact contact) : this()

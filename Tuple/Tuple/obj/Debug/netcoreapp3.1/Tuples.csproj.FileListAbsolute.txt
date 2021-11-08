@@ -1,0 +1,14 @@
+F:\SG C# course\training\Tuple\Tuple\bin\Debug\netcoreapp3.1\Tuples.exe
+F:\SG C# course\training\Tuple\Tuple\bin\Debug\netcoreapp3.1\Tuples.deps.json
+F:\SG C# course\training\Tuple\Tuple\bin\Debug\netcoreapp3.1\Tuples.runtimeconfig.json
+F:\SG C# course\training\Tuple\Tuple\bin\Debug\netcoreapp3.1\Tuples.runtimeconfig.dev.json
+F:\SG C# course\training\Tuple\Tuple\bin\Debug\netcoreapp3.1\Tuples.dll
+F:\SG C# course\training\Tuple\Tuple\bin\Debug\netcoreapp3.1\Tuples.pdb
+F:\SG C# course\training\Tuple\Tuple\obj\Debug\netcoreapp3.1\Tuples.csproj.AssemblyReference.cache
+F:\SG C# course\training\Tuple\Tuple\obj\Debug\netcoreapp3.1\Tuples.GeneratedMSBuildEditorConfig.editorconfig
+F:\SG C# course\training\Tuple\Tuple\obj\Debug\netcoreapp3.1\Tuples.AssemblyInfoInputs.cache
+F:\SG C# course\training\Tuple\Tuple\obj\Debug\netcoreapp3.1\Tuples.AssemblyInfo.cs
+F:\SG C# course\training\Tuple\Tuple\obj\Debug\netcoreapp3.1\Tuples.csproj.CoreCompileInputs.cache
+F:\SG C# course\training\Tuple\Tuple\obj\Debug\netcoreapp3.1\Tuples.dll
+F:\SG C# course\training\Tuple\Tuple\obj\Debug\netcoreapp3.1\Tuples.pdb
+F:\SG C# course\training\Tuple\Tuple\obj\Debug\netcoreapp3.1\Tuples.genruntimeconfig.cache

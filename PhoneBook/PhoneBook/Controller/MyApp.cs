@@ -18,7 +18,7 @@ namespace PhoneBookApp.Controller
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new PhoneBookForm(new PhoneBook()));
+            Application.Run(new PhoneBookForm(new PhoneBookManager()));
         }
     }
 }

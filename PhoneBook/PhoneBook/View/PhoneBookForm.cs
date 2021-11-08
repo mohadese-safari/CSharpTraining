@@ -1,5 +1,4 @@
-﻿using PhoneBook;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using PhoneBookApp.Model;
+using PhoneBookApp.Controller;
+using PhoneBookApp.PhoneBookExceptions;
 
 namespace PhoneBookApp.View
 {
@@ -19,13 +20,13 @@ namespace PhoneBookApp.View
         public static OnSaveContact OnSaveContact { get; set; }
         public static OnDeleteContact OnDeleteContact { get; set; }
 
-        readonly Bitmap defaultAvatar = global::PhoneBook.Properties.Resources.avatar_default_icon;
+        readonly Bitmap defaultAvatar = global::PhoneBookApp.Properties.Resources.avatar_default_icon;
         readonly int LBL_CONTACT_NAME_WIDTH;
         const int LBL_CONTACT_NAME_HEIGHT = 70;
-        private PhoneBookApp.Model.PhoneBook PhoneBook { get; }
-        public PhoneBookForm(PhoneBookApp.Model.PhoneBook phoneBook)
+        private PhoneBookManager PhoneBookManager { get; }
+        public PhoneBookForm(PhoneBookManager phoneBookmanager)
         {
-            PhoneBook = phoneBook;
+            PhoneBookManager = phoneBookmanager;
             InitializeComponent();
             LBL_CONTACT_NAME_WIDTH = ClientSize.Width - 10;
             HorizontalScroll.Enabled = false;
@@ -38,7 +39,14 @@ namespace PhoneBookApp.View
 
         private void OnAddContactAction(Contact contact)
         {
-            PhoneBook.AddContact(contact);
+            try {
+                PhoneBookManager.AddNewContact(contact);
+            }
+            catch (DuplicateContactFullNameException ex)
+            {
+                MessageBox.Show("Can not add a contact with duplicate full name",ex.Message);
+            }
+            
         }
 
         private void OnEditContactButtonPressed(Contact contact)
@@ -57,10 +65,22 @@ namespace PhoneBookApp.View
 
         private void OnDeleteContactButtonPressed(Contact contact)
         {
-            PhoneBook.Contacts.Remove(contact);
-            Enabled = true;
-            Visible = true;
-            BringToFront();
+            try
+            {
+                PhoneBookManager.RemoveContact(contact);
+                Enabled = true;
+                Visible = true;
+                BringToFront();
+            }
+            catch (InvalidContactException ex)
+            {
+                MessageBox.Show("Contact does not exist",ex.Message);
+            }
+            finally
+            {
+                LoadContacts();
+            }
+
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -83,7 +103,7 @@ namespace PhoneBookApp.View
 
         private void LoadContacts()
         {
-            LoadContacts(PhoneBook.Contacts);
+            LoadContacts(PhoneBookManager.Contacts);
         }
 
         private void LoadContactAvatar(Contact contact)
@@ -114,7 +134,7 @@ namespace PhoneBookApp.View
         {
             var label = sender as Label;
             Contact contatct = label.Tag as Contact;
-            new ContactDetail(contatct).Show();
+            new ContactCrudForm(contatct).Show();
         }
 
         private void ClearLayout(int newRowCount)
@@ -134,7 +154,7 @@ namespace PhoneBookApp.View
         {
             keyword = keyword.ToLower();
             var searchResult = new List<Contact>();
-            foreach (Contact contact in PhoneBook.Contacts)
+            foreach (Contact contact in PhoneBookManager.Contacts)
             {
                 if (contact.FirstName.ToLower().Contains(keyword) ||
                     contact.LastName.ToLower().Contains(keyword) ||
@@ -159,7 +179,7 @@ namespace PhoneBookApp.View
 
         private void Form1_EnabledChanged(object sender, EventArgs e)
         {
-            if (PhoneBook.Contacts.Count == 0)
+            if (PhoneBookManager.Contacts.Count == 0)
                 ShowEmptyContactListMessage();
             else
                 HideEmptyContactListMessage();
