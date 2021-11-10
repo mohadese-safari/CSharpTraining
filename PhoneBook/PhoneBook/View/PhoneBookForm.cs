@@ -42,11 +42,15 @@ namespace PhoneBookApp.View
             try {
                 PhoneBookManager.AddNewContact(contact);
             }
-            catch (DuplicateContactFullNameException ex)
+            catch (DuplicateContactFullNameException ex )
             {
-                MessageBox.Show("Can not add a contact with duplicate full name",ex.Message);
+                MessageBox.Show(ex.Message,ex.Title);
             }
-            
+            catch (EmptyContactCredientalsException ex)
+            {
+                MessageBox.Show(ex.Message, ex.Title);
+            }
+
         }
 
         private void OnEditContactButtonPressed(Contact contact)

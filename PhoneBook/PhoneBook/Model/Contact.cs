@@ -39,6 +39,13 @@ namespace PhoneBookApp.Model
         public string LastName { get; set; }
 
         public string Email { get; set; }
+        public string FullName
+        {
+            get
+            {
+                return $"{FirstName} {LastName}";
+            }
+        }
 
         public string ImageUrl { get; set; }
         public List<PhoneNumber> PhoneNumbers { get; set; }

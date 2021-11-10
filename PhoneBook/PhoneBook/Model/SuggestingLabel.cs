@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PhoneBookApp.Model
 {
-    enum SuggestingLabel
+    enum SuggestingLabel : byte
     {
         Home,
         Work,

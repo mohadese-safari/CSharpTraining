@@ -1,0 +1,14 @@
+F:\SG C# course\training\Cloning\Cloning\bin\Debug\netcoreapp3.1\Cloning.exe
+F:\SG C# course\training\Cloning\Cloning\bin\Debug\netcoreapp3.1\Cloning.deps.json
+F:\SG C# course\training\Cloning\Cloning\bin\Debug\netcoreapp3.1\Cloning.runtimeconfig.json
+F:\SG C# course\training\Cloning\Cloning\bin\Debug\netcoreapp3.1\Cloning.runtimeconfig.dev.json
+F:\SG C# course\training\Cloning\Cloning\bin\Debug\netcoreapp3.1\Cloning.dll
+F:\SG C# course\training\Cloning\Cloning\bin\Debug\netcoreapp3.1\Cloning.pdb
+F:\SG C# course\training\Cloning\Cloning\obj\Debug\netcoreapp3.1\Cloning.csproj.AssemblyReference.cache
+F:\SG C# course\training\Cloning\Cloning\obj\Debug\netcoreapp3.1\Cloning.GeneratedMSBuildEditorConfig.editorconfig
+F:\SG C# course\training\Cloning\Cloning\obj\Debug\netcoreapp3.1\Cloning.AssemblyInfoInputs.cache
+F:\SG C# course\training\Cloning\Cloning\obj\Debug\netcoreapp3.1\Cloning.AssemblyInfo.cs
+F:\SG C# course\training\Cloning\Cloning\obj\Debug\netcoreapp3.1\Cloning.csproj.CoreCompileInputs.cache
+F:\SG C# course\training\Cloning\Cloning\obj\Debug\netcoreapp3.1\Cloning.dll
+F:\SG C# course\training\Cloning\Cloning\obj\Debug\netcoreapp3.1\Cloning.pdb
+F:\SG C# course\training\Cloning\Cloning\obj\Debug\netcoreapp3.1\Cloning.genruntimeconfig.cache

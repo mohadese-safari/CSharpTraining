@@ -1,0 +1,14 @@
+F:\SG C# course\training\IndexerSample\IndexerSample\bin\Debug\netcoreapp3.1\IndexerSample.exe
+F:\SG C# course\training\IndexerSample\IndexerSample\bin\Debug\netcoreapp3.1\IndexerSample.deps.json
+F:\SG C# course\training\IndexerSample\IndexerSample\bin\Debug\netcoreapp3.1\IndexerSample.runtimeconfig.json
+F:\SG C# course\training\IndexerSample\IndexerSample\bin\Debug\netcoreapp3.1\IndexerSample.runtimeconfig.dev.json
+F:\SG C# course\training\IndexerSample\IndexerSample\bin\Debug\netcoreapp3.1\IndexerSample.dll
+F:\SG C# course\training\IndexerSample\IndexerSample\bin\Debug\netcoreapp3.1\IndexerSample.pdb
+F:\SG C# course\training\IndexerSample\IndexerSample\obj\Debug\netcoreapp3.1\IndexerSample.csproj.AssemblyReference.cache
+F:\SG C# course\training\IndexerSample\IndexerSample\obj\Debug\netcoreapp3.1\IndexerSample.GeneratedMSBuildEditorConfig.editorconfig
+F:\SG C# course\training\IndexerSample\IndexerSample\obj\Debug\netcoreapp3.1\IndexerSample.AssemblyInfoInputs.cache
+F:\SG C# course\training\IndexerSample\IndexerSample\obj\Debug\netcoreapp3.1\IndexerSample.AssemblyInfo.cs
+F:\SG C# course\training\IndexerSample\IndexerSample\obj\Debug\netcoreapp3.1\IndexerSample.csproj.CoreCompileInputs.cache
+F:\SG C# course\training\IndexerSample\IndexerSample\obj\Debug\netcoreapp3.1\IndexerSample.dll
+F:\SG C# course\training\IndexerSample\IndexerSample\obj\Debug\netcoreapp3.1\IndexerSample.pdb
+F:\SG C# course\training\IndexerSample\IndexerSample\obj\Debug\netcoreapp3.1\IndexerSample.genruntimeconfig.cache

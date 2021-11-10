@@ -1,0 +1,14 @@
+F:\SG C# course\training\Reflection\Reflection\obj\Debug\netcoreapp3.1\Reflection.csproj.AssemblyReference.cache
+F:\SG C# course\training\Reflection\Reflection\obj\Debug\netcoreapp3.1\Reflection.GeneratedMSBuildEditorConfig.editorconfig
+F:\SG C# course\training\Reflection\Reflection\obj\Debug\netcoreapp3.1\Reflection.AssemblyInfoInputs.cache
+F:\SG C# course\training\Reflection\Reflection\obj\Debug\netcoreapp3.1\Reflection.AssemblyInfo.cs
+F:\SG C# course\training\Reflection\Reflection\obj\Debug\netcoreapp3.1\Reflection.csproj.CoreCompileInputs.cache
+F:\SG C# course\training\Reflection\Reflection\bin\Debug\netcoreapp3.1\Reflection.exe
+F:\SG C# course\training\Reflection\Reflection\bin\Debug\netcoreapp3.1\Reflection.deps.json
+F:\SG C# course\training\Reflection\Reflection\bin\Debug\netcoreapp3.1\Reflection.runtimeconfig.json
+F:\SG C# course\training\Reflection\Reflection\bin\Debug\netcoreapp3.1\Reflection.runtimeconfig.dev.json
+F:\SG C# course\training\Reflection\Reflection\bin\Debug\netcoreapp3.1\Reflection.dll
+F:\SG C# course\training\Reflection\Reflection\bin\Debug\netcoreapp3.1\Reflection.pdb
+F:\SG C# course\training\Reflection\Reflection\obj\Debug\netcoreapp3.1\Reflection.dll
+F:\SG C# course\training\Reflection\Reflection\obj\Debug\netcoreapp3.1\Reflection.pdb
+F:\SG C# course\training\Reflection\Reflection\obj\Debug\netcoreapp3.1\Reflection.genruntimeconfig.cache

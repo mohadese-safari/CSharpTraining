@@ -8,9 +8,49 @@ namespace Variance
     {
         static void Main(string[] args)
         {
-            IEnumerable<String> strings = new List<String>();
-            IEnumerable<Object> objects = strings;
+            void GetAction(Action<Animal> action)
+            {
+                action(new Cat());
+
+            }
+
+            void GetAction2(Action<Cat> action)
+            {
+                action(new PersianCat());
+
+            }
+            void MyDog(Dog dog)
+            {
+
+            }
+
+            void MyAnimal(Animal animal)
+            {
+
+            }
+
+            GetAction(MyDog);
+            GetAction2(MyAnimal);
 
         }
+
+    }
+
+    class Animal
+    {
+
+    }
+    class Dog : Animal
+    {
+
+    }
+    class Cat : Animal
+    {
+
+    }
+
+    class PersianCat : Cat
+    {
+
     }
 }

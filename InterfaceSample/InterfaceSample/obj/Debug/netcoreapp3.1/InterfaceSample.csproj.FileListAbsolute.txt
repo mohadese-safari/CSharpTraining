@@ -1,0 +1,14 @@
+F:\SG C# course\training\InterfaceSample\InterfaceSample\bin\Debug\netcoreapp3.1\InterfaceSample.exe
+F:\SG C# course\training\InterfaceSample\InterfaceSample\bin\Debug\netcoreapp3.1\InterfaceSample.deps.json
+F:\SG C# course\training\InterfaceSample\InterfaceSample\bin\Debug\netcoreapp3.1\InterfaceSample.runtimeconfig.json
+F:\SG C# course\training\InterfaceSample\InterfaceSample\bin\Debug\netcoreapp3.1\InterfaceSample.runtimeconfig.dev.json
+F:\SG C# course\training\InterfaceSample\InterfaceSample\bin\Debug\netcoreapp3.1\InterfaceSample.dll
+F:\SG C# course\training\InterfaceSample\InterfaceSample\bin\Debug\netcoreapp3.1\InterfaceSample.pdb
+F:\SG C# course\training\InterfaceSample\InterfaceSample\obj\Debug\netcoreapp3.1\InterfaceSample.csproj.AssemblyReference.cache
+F:\SG C# course\training\InterfaceSample\InterfaceSample\obj\Debug\netcoreapp3.1\InterfaceSample.GeneratedMSBuildEditorConfig.editorconfig
+F:\SG C# course\training\InterfaceSample\InterfaceSample\obj\Debug\netcoreapp3.1\InterfaceSample.AssemblyInfoInputs.cache
+F:\SG C# course\training\InterfaceSample\InterfaceSample\obj\Debug\netcoreapp3.1\InterfaceSample.AssemblyInfo.cs
+F:\SG C# course\training\InterfaceSample\InterfaceSample\obj\Debug\netcoreapp3.1\InterfaceSample.csproj.CoreCompileInputs.cache
+F:\SG C# course\training\InterfaceSample\InterfaceSample\obj\Debug\netcoreapp3.1\InterfaceSample.dll
+F:\SG C# course\training\InterfaceSample\InterfaceSample\obj\Debug\netcoreapp3.1\InterfaceSample.pdb
+F:\SG C# course\training\InterfaceSample\InterfaceSample\obj\Debug\netcoreapp3.1\InterfaceSample.genruntimeconfig.cache

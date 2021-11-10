@@ -1,0 +1,14 @@
+F:\SG C# course\training\Iterator\Enummerators\bin\Debug\netcoreapp3.1\Enummerators.exe
+F:\SG C# course\training\Iterator\Enummerators\bin\Debug\netcoreapp3.1\Enummerators.deps.json
+F:\SG C# course\training\Iterator\Enummerators\bin\Debug\netcoreapp3.1\Enummerators.runtimeconfig.json
+F:\SG C# course\training\Iterator\Enummerators\bin\Debug\netcoreapp3.1\Enummerators.runtimeconfig.dev.json
+F:\SG C# course\training\Iterator\Enummerators\bin\Debug\netcoreapp3.1\Enummerators.dll
+F:\SG C# course\training\Iterator\Enummerators\bin\Debug\netcoreapp3.1\Enummerators.pdb
+F:\SG C# course\training\Iterator\Enummerators\obj\Debug\netcoreapp3.1\Enummerators.csproj.AssemblyReference.cache
+F:\SG C# course\training\Iterator\Enummerators\obj\Debug\netcoreapp3.1\Enummerators.GeneratedMSBuildEditorConfig.editorconfig
+F:\SG C# course\training\Iterator\Enummerators\obj\Debug\netcoreapp3.1\Enummerators.AssemblyInfoInputs.cache
+F:\SG C# course\training\Iterator\Enummerators\obj\Debug\netcoreapp3.1\Enummerators.AssemblyInfo.cs
+F:\SG C# course\training\Iterator\Enummerators\obj\Debug\netcoreapp3.1\Enummerators.csproj.CoreCompileInputs.cache
+F:\SG C# course\training\Iterator\Enummerators\obj\Debug\netcoreapp3.1\Enummerators.dll
+F:\SG C# course\training\Iterator\Enummerators\obj\Debug\netcoreapp3.1\Enummerators.pdb
+F:\SG C# course\training\Iterator\Enummerators\obj\Debug\netcoreapp3.1\Enummerators.genruntimeconfig.cache

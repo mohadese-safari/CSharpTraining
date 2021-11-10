@@ -13,6 +13,7 @@ using PhoneBookApp.Model;
 
 namespace PhoneBookApp.View
 {
+
     public partial class ContactCrudForm : Form
     {
         readonly Bitmap defaultAvatar = global::PhoneBookApp.Properties.Resources.avatar_default_icon;
@@ -119,9 +120,5 @@ namespace PhoneBookApp.View
             Dispose();
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }

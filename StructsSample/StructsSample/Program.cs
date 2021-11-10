@@ -23,13 +23,31 @@ namespace StructsSample
             //Point p3 = new Point(2,3);
             //Console.WriteLine(p3);
 
-            Circle c = new Circle(4,10);
+            Circle c = new Circle(4, 10);
             // Console.WriteLine(c);
             // Point p4 = c.Center;
             // Console.WriteLine(p4);
             c.Center.Color.B = 4;
             /* c.Center.x = 9;*/ //Compile error
             Console.WriteLine(c);
+            Color white = new Color(255, 255, 255);
+            Color white2 = new Color(255, 255, 255);
+
+            //Test equality
+            Point p5 = new Point
+            {
+                Color = white,
+                x = 8,
+                y = 10
+            };
+            Point p6 = new Point
+            {
+                Color = white,
+                x = 8,
+                y = 10
+            };
+            Console.WriteLine(p5.Equals(p6));
+
         }
     }
 

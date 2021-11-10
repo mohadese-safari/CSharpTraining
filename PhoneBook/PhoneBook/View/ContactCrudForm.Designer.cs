@@ -43,14 +43,14 @@ namespace PhoneBookApp.View
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.lblPhoneLabel1 = new System.Windows.Forms.Label();
             this.cmbBoxPhoneLabel = new System.Windows.Forms.ComboBox();
-            this.picBoxAvatar = new PhoneBookApp.Model.OvalPictureBox();
             this.picBoxDeleteContact = new System.Windows.Forms.PictureBox();
             this.picBoxSaveContact = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.picBoxAvatar)).BeginInit();
+            this.picBoxAvatar = new PhoneBookApp.Model.OvalPictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxDeleteContact)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxSaveContact)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxAvatar)).BeginInit();
             this.SuspendLayout();
             // 
             // txtFirstName
@@ -147,19 +147,6 @@ namespace PhoneBookApp.View
             this.cmbBoxPhoneLabel.Size = new System.Drawing.Size(133, 24);
             this.cmbBoxPhoneLabel.TabIndex = 12;
             // 
-            // picBoxAvatar
-            // 
-            this.picBoxAvatar.BackColor = System.Drawing.Color.Transparent;
-            this.picBoxAvatar.Image = ((System.Drawing.Image)(resources.GetObject("picBoxAvatar.Image")));
-            this.picBoxAvatar.Location = new System.Drawing.Point(144, 47);
-            this.picBoxAvatar.Name = "picBoxAvatar";
-            this.picBoxAvatar.Padding = new System.Windows.Forms.Padding(10);
-            this.picBoxAvatar.Size = new System.Drawing.Size(121, 108);
-            this.picBoxAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picBoxAvatar.TabIndex = 16;
-            this.picBoxAvatar.TabStop = false;
-            this.picBoxAvatar.Click += new System.EventHandler(this.picBoxAvatar_Click);
-            // 
             // picBoxDeleteContact
             // 
             this.picBoxDeleteContact.Image = ((System.Drawing.Image)(resources.GetObject("picBoxDeleteContact.Image")));
@@ -192,6 +179,19 @@ namespace PhoneBookApp.View
             this.pictureBox1.TabIndex = 13;
             this.pictureBox1.TabStop = false;
             // 
+            // picBoxAvatar
+            // 
+            this.picBoxAvatar.BackColor = System.Drawing.Color.Transparent;
+            this.picBoxAvatar.Image = ((System.Drawing.Image)(resources.GetObject("picBoxAvatar.Image")));
+            this.picBoxAvatar.Location = new System.Drawing.Point(144, 47);
+            this.picBoxAvatar.Name = "picBoxAvatar";
+            this.picBoxAvatar.Padding = new System.Windows.Forms.Padding(10);
+            this.picBoxAvatar.Size = new System.Drawing.Size(121, 108);
+            this.picBoxAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picBoxAvatar.TabIndex = 16;
+            this.picBoxAvatar.TabStop = false;
+            this.picBoxAvatar.Click += new System.EventHandler(this.picBoxAvatar_Click);
+            // 
             // ContactCrudForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -217,10 +217,10 @@ namespace PhoneBookApp.View
             this.Name = "ContactCrudForm";
             this.Text = "Add/Modify contact";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.CRUDForm_FormClosed);
-            ((System.ComponentModel.ISupportInitialize)(this.picBoxAvatar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxDeleteContact)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxSaveContact)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxAvatar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -1,0 +1,14 @@
+F:\SG C# course\training\Iterator\Iterator\bin\Debug\netcoreapp3.1\Iterators.exe
+F:\SG C# course\training\Iterator\Iterator\bin\Debug\netcoreapp3.1\Iterators.deps.json
+F:\SG C# course\training\Iterator\Iterator\bin\Debug\netcoreapp3.1\Iterators.runtimeconfig.json
+F:\SG C# course\training\Iterator\Iterator\bin\Debug\netcoreapp3.1\Iterators.runtimeconfig.dev.json
+F:\SG C# course\training\Iterator\Iterator\bin\Debug\netcoreapp3.1\Iterators.dll
+F:\SG C# course\training\Iterator\Iterator\bin\Debug\netcoreapp3.1\Iterators.pdb
+F:\SG C# course\training\Iterator\Iterator\obj\Debug\netcoreapp3.1\Iterators.csproj.AssemblyReference.cache
+F:\SG C# course\training\Iterator\Iterator\obj\Debug\netcoreapp3.1\Iterators.GeneratedMSBuildEditorConfig.editorconfig
+F:\SG C# course\training\Iterator\Iterator\obj\Debug\netcoreapp3.1\Iterators.AssemblyInfoInputs.cache
+F:\SG C# course\training\Iterator\Iterator\obj\Debug\netcoreapp3.1\Iterators.AssemblyInfo.cs
+F:\SG C# course\training\Iterator\Iterator\obj\Debug\netcoreapp3.1\Iterators.csproj.CoreCompileInputs.cache
+F:\SG C# course\training\Iterator\Iterator\obj\Debug\netcoreapp3.1\Iterators.dll
+F:\SG C# course\training\Iterator\Iterator\obj\Debug\netcoreapp3.1\Iterators.pdb
+F:\SG C# course\training\Iterator\Iterator\obj\Debug\netcoreapp3.1\Iterators.genruntimeconfig.cache

@@ -7,10 +7,11 @@ using PhoneBookApp.Model;
 using PhoneBookApp.PhoneBookExceptions;
 namespace PhoneBookApp.Model
 {
-   public class PhoneBookManager
+    public class PhoneBookManager
     {
         public PhoneBook PhoneBook { get; set; }
-        public List<Contact> Contacts {
+        public List<Contact> Contacts
+        {
             get { return PhoneBook.Contacts; }
         }
         public PhoneBookManager(PhoneBook phoneBook)
@@ -18,27 +19,34 @@ namespace PhoneBookApp.Model
             PhoneBook = phoneBook;
         }
 
+
         public PhoneBookManager() : this(new PhoneBook()) { }
 
         public void AddNewContact(Contact newContact)
         {
-            foreach (Contact contact in PhoneBook.Contacts)
+            if (string.IsNullOrWhiteSpace(newContact.FullName))
             {
-                if (contact.Equals(newContact))
-                {
-                    throw new DuplicateContactFullNameException();
-                }
+                throw new EmptyContactCredientalsException();
+            }
+            if (ContactExists(newContact))
+            {
+                throw new DuplicateContactFullNameException();
             }
             PhoneBook.Contacts.Add(newContact);
         }
 
         public void RemoveContact(Contact toBeRemovedContact)
         {
-           bool successfullyRemoved = PhoneBook.Contacts.Remove(toBeRemovedContact);
+            bool successfullyRemoved = PhoneBook.Contacts.Remove(toBeRemovedContact);
             if (!successfullyRemoved)
             {
                 throw new InvalidContactException();
             }
+        }
+
+        public bool ContactExists(Contact newContact)
+        {
+            return PhoneBook.Contacts.Where(f => f.Equals(newContact)).Count() > 0;
         }
     }
 }
