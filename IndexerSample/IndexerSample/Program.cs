@@ -8,12 +8,14 @@ namespace IndexerSample
         {
             Sentence sentence = "Sink your teeth into an action-packed educational adventure.";
             Console.WriteLine(sentence.Word[0]);
+            sentence.Word[7] = "adventures.";
             string a = "7";
             string b = "7";
             Console.WriteLine(object.ReferenceEquals(a, b));
+            Console.WriteLine(sentence);
         }
     }
-    class Sentence
+    class Sentence 
     {
         public Word Word;
 
@@ -27,26 +29,55 @@ namespace IndexerSample
             return new Sentence(str);
         }
 
-}
-
-class Word
-{
-    private string[] Words { get; set; }
-    public Word(string text)
-    {
-        Words = text.Split(" ", StringSplitOptions.RemoveEmptyEntries);
-    }
-    public string this[int i]
-    {
-        get
+        public override string ToString()
         {
-            return Words[i];
+            return Word.ToString();
         }
 
-        set
+    }
+
+    class Word
+    {
+        private string[] Words { get; set; }
+        private string _contetnt;
+
+        private bool ContentChanged { get; set; }
+        public Word(string text)
         {
-            Words[i] = value;
+            Words = text.Split(" ", StringSplitOptions.RemoveEmptyEntries);
+            _contetnt = text;
+            ContentChanged = false;
+        }
+
+        private string Content
+        {
+            get
+            {
+                if (ContentChanged)
+                {
+                    _contetnt = string.Join(" ", Words);
+                    ContentChanged = false;
+                }
+                return _contetnt;
+            }
+        }
+        public string this[int i]
+        {
+            get
+            {
+                return Words[i];
+            }
+
+            set
+            {
+                ContentChanged = Words[i] != value;
+                Words[i] = value;
+            }
+        }
+
+        public override string ToString()
+        {
+            return Content;
         }
     }
-}
 }

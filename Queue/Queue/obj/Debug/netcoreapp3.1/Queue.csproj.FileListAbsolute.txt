@@ -1,0 +1,14 @@
+F:\SG C# course\training\Queue\Queue\obj\Debug\netcoreapp3.1\Queue.GeneratedMSBuildEditorConfig.editorconfig
+F:\SG C# course\training\Queue\Queue\obj\Debug\netcoreapp3.1\Queue.AssemblyInfoInputs.cache
+F:\SG C# course\training\Queue\Queue\obj\Debug\netcoreapp3.1\Queue.AssemblyInfo.cs
+F:\SG C# course\training\Queue\Queue\obj\Debug\netcoreapp3.1\Queue.csproj.CoreCompileInputs.cache
+F:\SG C# course\training\Queue\Queue\bin\Debug\netcoreapp3.1\Queue.exe
+F:\SG C# course\training\Queue\Queue\bin\Debug\netcoreapp3.1\Queue.deps.json
+F:\SG C# course\training\Queue\Queue\bin\Debug\netcoreapp3.1\Queue.runtimeconfig.json
+F:\SG C# course\training\Queue\Queue\bin\Debug\netcoreapp3.1\Queue.runtimeconfig.dev.json
+F:\SG C# course\training\Queue\Queue\bin\Debug\netcoreapp3.1\Queue.dll
+F:\SG C# course\training\Queue\Queue\bin\Debug\netcoreapp3.1\Queue.pdb
+F:\SG C# course\training\Queue\Queue\obj\Debug\netcoreapp3.1\Queue.dll
+F:\SG C# course\training\Queue\Queue\obj\Debug\netcoreapp3.1\Queue.pdb
+F:\SG C# course\training\Queue\Queue\obj\Debug\netcoreapp3.1\Queue.genruntimeconfig.cache
+F:\SG C# course\training\Queue\Queue\obj\Debug\netcoreapp3.1\Queue.csproj.AssemblyReference.cache
