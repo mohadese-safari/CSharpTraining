@@ -10,7 +10,8 @@ namespace Delegates
         static void Main(string[] args)
         {
             //Beginner
-            //NumberOperation numberOperation = Multiply;
+            //NumberOperation numberOperation = new NumberOperation( Multiply);
+            // NumberOperation numberOperation = Multiply;
             //Console.WriteLine(numberOperation(1, 8));
             //SequentialNumberOperation ops = new SequentialNumberOperation(Add) + new SequentialNumberOperation(Multiply);
 
@@ -21,15 +22,14 @@ namespace Delegates
             Action loopTest = new Action(
                 () => Console.WriteLine(i)
                 );
-            for ( i = 1; i < 10; i++)
-            {
-                loopTest += delegate ()
-                {
-                    Console.WriteLine(i);
-                };
-                loopTest();
-            }
-            i += 10;
+
+            //for ( i = 1; i < 10; i++)
+            //{
+         
+            loopTest += () => Console.WriteLine(i);
+            i = 10;
+            //}
+            //i += 10;
             loopTest();
             
 

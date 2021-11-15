@@ -1,0 +1,14 @@
+F:\SG C# course\training\Threads\Threads\bin\Debug\netcoreapp3.1\Threads.exe
+F:\SG C# course\training\Threads\Threads\bin\Debug\netcoreapp3.1\Threads.deps.json
+F:\SG C# course\training\Threads\Threads\bin\Debug\netcoreapp3.1\Threads.runtimeconfig.json
+F:\SG C# course\training\Threads\Threads\bin\Debug\netcoreapp3.1\Threads.runtimeconfig.dev.json
+F:\SG C# course\training\Threads\Threads\bin\Debug\netcoreapp3.1\Threads.dll
+F:\SG C# course\training\Threads\Threads\bin\Debug\netcoreapp3.1\Threads.pdb
+F:\SG C# course\training\Threads\Threads\obj\Debug\netcoreapp3.1\Threads.csproj.AssemblyReference.cache
+F:\SG C# course\training\Threads\Threads\obj\Debug\netcoreapp3.1\Threads.GeneratedMSBuildEditorConfig.editorconfig
+F:\SG C# course\training\Threads\Threads\obj\Debug\netcoreapp3.1\Threads.AssemblyInfoInputs.cache
+F:\SG C# course\training\Threads\Threads\obj\Debug\netcoreapp3.1\Threads.AssemblyInfo.cs
+F:\SG C# course\training\Threads\Threads\obj\Debug\netcoreapp3.1\Threads.csproj.CoreCompileInputs.cache
+F:\SG C# course\training\Threads\Threads\obj\Debug\netcoreapp3.1\Threads.dll
+F:\SG C# course\training\Threads\Threads\obj\Debug\netcoreapp3.1\Threads.pdb
+F:\SG C# course\training\Threads\Threads\obj\Debug\netcoreapp3.1\Threads.genruntimeconfig.cache

@@ -17,7 +17,13 @@ namespace BoxingAndUnboxing
             //Console.WriteLine(o);
             //Console.WriteLine(p);
             object o = 10;
-            double d = (double)o;
+            double d1 = (double)(int)o; // unbox and explicit cast
+            double d2 = (int)o; //unbox and implicit cast
+            double d3 = (double)o; // Exception
+
+            object[] a2 = new object[] { 1, 2, 3 };
+            a2[2] = 8;
+            Console.WriteLine(a2[2]);
         }
     }
 }

@@ -46,7 +46,7 @@ namespace DataStructures
 
             Front = (Front + 1) % Capacity;
             Size--;
-            return elements[Front + 1];
+            return elements[Front -1];
         }
 
         public override string ToString()

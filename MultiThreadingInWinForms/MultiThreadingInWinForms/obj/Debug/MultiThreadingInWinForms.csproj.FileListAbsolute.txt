@@ -1,0 +1,10 @@
+F:\SG C# course\training\MultiThreadingInWinForms\MultiThreadingInWinForms\bin\Debug\MultiThreadingInWinForms.exe.config
+F:\SG C# course\training\MultiThreadingInWinForms\MultiThreadingInWinForms\bin\Debug\MultiThreadingInWinForms.exe
+F:\SG C# course\training\MultiThreadingInWinForms\MultiThreadingInWinForms\bin\Debug\MultiThreadingInWinForms.pdb
+F:\SG C# course\training\MultiThreadingInWinForms\MultiThreadingInWinForms\obj\Debug\MultiThreadingInWinForms.csproj.AssemblyReference.cache
+F:\SG C# course\training\MultiThreadingInWinForms\MultiThreadingInWinForms\obj\Debug\MultiThreadingInWinForms.Form1.resources
+F:\SG C# course\training\MultiThreadingInWinForms\MultiThreadingInWinForms\obj\Debug\MultiThreadingInWinForms.Properties.Resources.resources
+F:\SG C# course\training\MultiThreadingInWinForms\MultiThreadingInWinForms\obj\Debug\MultiThreadingInWinForms.csproj.GenerateResource.cache
+F:\SG C# course\training\MultiThreadingInWinForms\MultiThreadingInWinForms\obj\Debug\MultiThreadingInWinForms.csproj.CoreCompileInputs.cache
+F:\SG C# course\training\MultiThreadingInWinForms\MultiThreadingInWinForms\obj\Debug\MultiThreadingInWinForms.exe
+F:\SG C# course\training\MultiThreadingInWinForms\MultiThreadingInWinForms\obj\Debug\MultiThreadingInWinForms.pdb

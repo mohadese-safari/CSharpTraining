@@ -16,7 +16,6 @@ namespace GenericTypes
             dict.Add(adress1, p1);
             dict.Add(adress2, p2);
             Console.WriteLine( dict[adress1]);
-            object
 
         }
 
@@ -63,4 +62,5 @@ namespace GenericTypes
             return $"city : {City}, street : {Street} ";
         }
     }
+
 }

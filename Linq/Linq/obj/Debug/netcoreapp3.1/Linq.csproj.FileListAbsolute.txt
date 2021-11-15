@@ -1,0 +1,14 @@
+F:\SG C# course\training\Linq\Linq\bin\Debug\netcoreapp3.1\Linq.exe
+F:\SG C# course\training\Linq\Linq\bin\Debug\netcoreapp3.1\Linq.deps.json
+F:\SG C# course\training\Linq\Linq\bin\Debug\netcoreapp3.1\Linq.runtimeconfig.json
+F:\SG C# course\training\Linq\Linq\bin\Debug\netcoreapp3.1\Linq.runtimeconfig.dev.json
+F:\SG C# course\training\Linq\Linq\bin\Debug\netcoreapp3.1\Linq.dll
+F:\SG C# course\training\Linq\Linq\bin\Debug\netcoreapp3.1\Linq.pdb
+F:\SG C# course\training\Linq\Linq\obj\Debug\netcoreapp3.1\Linq.csproj.AssemblyReference.cache
+F:\SG C# course\training\Linq\Linq\obj\Debug\netcoreapp3.1\Linq.GeneratedMSBuildEditorConfig.editorconfig
+F:\SG C# course\training\Linq\Linq\obj\Debug\netcoreapp3.1\Linq.AssemblyInfoInputs.cache
+F:\SG C# course\training\Linq\Linq\obj\Debug\netcoreapp3.1\Linq.AssemblyInfo.cs
+F:\SG C# course\training\Linq\Linq\obj\Debug\netcoreapp3.1\Linq.csproj.CoreCompileInputs.cache
+F:\SG C# course\training\Linq\Linq\obj\Debug\netcoreapp3.1\Linq.dll
+F:\SG C# course\training\Linq\Linq\obj\Debug\netcoreapp3.1\Linq.pdb
+F:\SG C# course\training\Linq\Linq\obj\Debug\netcoreapp3.1\Linq.genruntimeconfig.cache

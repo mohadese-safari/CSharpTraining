@@ -1,0 +1,13 @@
+F:\SG C# course\training\Collections\Collections\bin\Debug\netcoreapp3.1\Collections.exe
+F:\SG C# course\training\Collections\Collections\bin\Debug\netcoreapp3.1\Collections.deps.json
+F:\SG C# course\training\Collections\Collections\bin\Debug\netcoreapp3.1\Collections.runtimeconfig.json
+F:\SG C# course\training\Collections\Collections\bin\Debug\netcoreapp3.1\Collections.runtimeconfig.dev.json
+F:\SG C# course\training\Collections\Collections\bin\Debug\netcoreapp3.1\Collections.dll
+F:\SG C# course\training\Collections\Collections\bin\Debug\netcoreapp3.1\Collections.pdb
+F:\SG C# course\training\Collections\Collections\obj\Debug\netcoreapp3.1\Collections.GeneratedMSBuildEditorConfig.editorconfig
+F:\SG C# course\training\Collections\Collections\obj\Debug\netcoreapp3.1\Collections.AssemblyInfoInputs.cache
+F:\SG C# course\training\Collections\Collections\obj\Debug\netcoreapp3.1\Collections.AssemblyInfo.cs
+F:\SG C# course\training\Collections\Collections\obj\Debug\netcoreapp3.1\Collections.csproj.CoreCompileInputs.cache
+F:\SG C# course\training\Collections\Collections\obj\Debug\netcoreapp3.1\Collections.dll
+F:\SG C# course\training\Collections\Collections\obj\Debug\netcoreapp3.1\Collections.pdb
+F:\SG C# course\training\Collections\Collections\obj\Debug\netcoreapp3.1\Collections.genruntimeconfig.cache
