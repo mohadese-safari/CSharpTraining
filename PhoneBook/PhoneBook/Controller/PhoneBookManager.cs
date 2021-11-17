@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using PhoneBookApp.Model;
+using PhoneBookApp.Model.Domain;
 using PhoneBookApp.PhoneBookExceptions;
+
 namespace PhoneBookApp.Model
 {
     public class PhoneBookManager
     {
+        private PhoneBookDBContext PhoneBookDBContext { get; set; }
         public PhoneBook PhoneBook { get; set; }
         public List<Contact> Contacts
         {
@@ -20,10 +22,22 @@ namespace PhoneBookApp.Model
         }
 
 
-        public PhoneBookManager() : this(new PhoneBook()) { }
+        public PhoneBookManager() : this(new PhoneBook())
+        {
+           // CreatePhoneBook();
+        }
+
+        //private void CreatePhoneBook()
+        //{
+        //    using (PhoneBookDBContext)
+        //    {
+        //        PhoneBookDBContext.PhoneBooks.Add(PhoneBook);
+        //    }
+        //}
 
         public void AddNewContact(Contact newContact)
         {
+
             if (string.IsNullOrWhiteSpace(newContact.FullName))
             {
                 throw new EmptyContactCredientalsException();
@@ -31,6 +45,12 @@ namespace PhoneBookApp.Model
             if (ContactExists(newContact))
             {
                 throw new DuplicateContactFullNameException();
+            }
+
+            using (PhoneBookDBContext = new PhoneBookDBContext())
+            {
+                PhoneBookDBContext.Contacts.Add(newContact);
+                PhoneBookDBContext.SaveChanges();
             }
             PhoneBook.Contacts.Add(newContact);
         }
@@ -47,6 +67,14 @@ namespace PhoneBookApp.Model
         public bool ContactExists(Contact newContact)
         {
             return PhoneBook.Contacts.Where(f => f.Equals(newContact)).Count() > 0;
+        }
+
+        public IEnumerable<Contact> GetAllContacts()
+        {
+            using (PhoneBookDBContext = new PhoneBookDBContext())
+            {
+                return PhoneBookDBContext.Contacts;
+            }
         }
     }
 }

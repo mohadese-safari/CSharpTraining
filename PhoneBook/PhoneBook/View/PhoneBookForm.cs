@@ -34,7 +34,12 @@ namespace PhoneBookApp.View
             OnAddContact += OnAddContactAction;
             OnSaveContact += OnSaveContactButtonPressed;
             OnEditContact += OnEditContactButtonPressed;
-            OnDeleteContact += OnDeleteContactButtonPressed;           
+            OnDeleteContact += OnDeleteContactButtonPressed;
+            HorizontalScroll.Enabled = false;
+            HorizontalScroll.Visible = false;
+            middlePanel.HorizontalScroll.Enabled = false;
+            middlePanel.HorizontalScroll.Visible = false;
+
         }
 
         private void OnAddContactAction(Contact contact)
@@ -191,9 +196,5 @@ namespace PhoneBookApp.View
             LoadContacts();
         }
 
-        private void PhoneBookForm_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

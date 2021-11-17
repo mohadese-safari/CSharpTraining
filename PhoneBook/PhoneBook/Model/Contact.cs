@@ -3,11 +3,19 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace PhoneBookApp.Model
 {
     public class Contact
     {
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int Id { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public string Email { get; set; }
         public Contact()
         {
             PhoneNumbers = new List<PhoneNumber>();
@@ -15,7 +23,6 @@ namespace PhoneBookApp.Model
         public Contact(string name) : this()
         {
             FirstName = name;
-
         }
 
         public Contact(string name, string lastName) : this(name)
@@ -35,10 +42,7 @@ namespace PhoneBookApp.Model
         {
             ImageUrl = imageUrl;
         }
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
 
-        public string Email { get; set; }
         public string FullName
         {
             get

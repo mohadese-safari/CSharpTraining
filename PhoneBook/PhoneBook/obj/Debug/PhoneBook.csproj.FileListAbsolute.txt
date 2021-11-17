@@ -13,3 +13,4 @@ F:\SG C# course\training\PhoneBook\PhoneBook\bin\Debug\EntityFramework.SqlServer
 F:\SG C# course\training\PhoneBook\PhoneBook\obj\Debug\PhoneBookApp.View.ContactCrudForm.resources
 F:\SG C# course\training\PhoneBook\PhoneBook\obj\Debug\PhoneBookApp.View.PhoneBookForm.resources
 F:\SG C# course\training\PhoneBook\PhoneBook\obj\Debug\PhoneBookApp.Properties.Resources.resources
+F:\SG C# course\training\PhoneBook\PhoneBook\obj\Debug\PhoneBookApp.View.TestForm.resources
