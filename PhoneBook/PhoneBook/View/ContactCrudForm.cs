@@ -46,7 +46,7 @@ namespace PhoneBookApp.View
             picBoxAvatar.ImageLocation = CurrentContact.ImageUrl;
         }
 
-        private Contact SaveContact(Contact contact, string firstName, string lastName, string email, string imageUrl)
+        private Contact SaveContactInfo(Contact contact, string firstName, string lastName, string email, string imageUrl)
         {
             contact.FirstName = firstName;
             contact.LastName = lastName;
@@ -54,7 +54,7 @@ namespace PhoneBookApp.View
             contact.ImageUrl = imageUrl;
             return contact;
         }
-        private Contact SaveContact(string firstName, string lastName, string email, string imageUrl)
+        private Contact SaveContactInfo(string firstName, string lastName, string email, string imageUrl)
         {
             Contact newContact = new Contact(firstName, lastName, email, imageUrl);
             PhoneBookForm.OnAddContact(newContact);
@@ -105,19 +105,20 @@ namespace PhoneBookApp.View
             string phoneLabel = cmbBoxPhoneLabel.Text;
             string imageUrl = picBoxAvatar.ImageLocation;
 
-            Contact contact;
             if (CurrentContact == null)
-                contact = SaveContact(firstName, lastName, email, imageUrl);
+                CurrentContact = SaveContactInfo(firstName, lastName, email, imageUrl);
             else
-                contact = SaveContact(CurrentContact, firstName, lastName, email, imageUrl);
+                CurrentContact = SaveContactInfo(CurrentContact, firstName, lastName, email, imageUrl);
 
-            if (phone != null && contact!=null)
+
+
+            if (phone != null && CurrentContact != null)
             {
                 List<PhoneNumber> phoneNumbers = new List<PhoneNumber>
             {
                 new PhoneNumber(phone,phoneLabel)
             };
-                PhoneBookForm.OnUpdatePhone(contact, phoneNumbers);
+                PhoneBookForm.OnUpdatePhone(CurrentContact, phoneNumbers);
             }
 
             Dispose();

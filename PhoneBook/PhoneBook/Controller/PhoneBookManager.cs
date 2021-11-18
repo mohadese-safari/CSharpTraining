@@ -53,16 +53,32 @@ namespace PhoneBookApp.Model
                 PhoneBookDBContext.SaveChanges();
                 return newContact;
             }
-            return null;
+
             //PhoneBook.Contacts.Add(newContact);
         }
 
         public void RemoveContact(Contact toBeRemovedContact)
         {
-            bool successfullyRemoved = PhoneBook.Contacts.Remove(toBeRemovedContact);
-            if (!successfullyRemoved)
+            RemoveContactPhoneNumbers(toBeRemovedContact);
+            using (PhoneBookDBContext = new PhoneBookDBContext())
             {
-                throw new InvalidContactException();
+                var removedContact = PhoneBookDBContext.Contacts.Where(c => c.Id == toBeRemovedContact.Id).FirstOrDefault();
+                if (removedContact == null)
+                {
+                    throw new InvalidContactException();
+                }
+                PhoneBookDBContext.Contacts.Remove(removedContact);
+                PhoneBookDBContext.SaveChanges();
+            }
+        }
+
+        public void RemoveContactPhoneNumbers(Contact contact)
+        {
+            using (PhoneBookDBContext = new PhoneBookDBContext())
+            {
+                var toBeRemovedPhoneNumbers = PhoneBookDBContext.Contacts.Where(c => c.Id == contact.Id).SelectMany(c => c.PhoneNumbers);
+                PhoneBookDBContext.phoneNumbers.RemoveRange(toBeRemovedPhoneNumbers);
+                PhoneBookDBContext.SaveChanges();
             }
         }
 
@@ -87,11 +103,12 @@ namespace PhoneBookApp.Model
                 var result = PhoneBookDBContext.Contacts.Where(c => c.Id == contact.Id).SelectMany(c => c.PhoneNumbers);
                 return result.ToList();
             }
-            
+
         }
         public List<Contact> GetAllContacts()
-        {         
-            using (PhoneBookDBContext = new PhoneBookDBContext())            {
+        {
+            using (PhoneBookDBContext = new PhoneBookDBContext())
+            {
                 List<Contact> allContacts = PhoneBookDBContext.Contacts.ToList();
                 return allContacts;
             }
@@ -99,7 +116,7 @@ namespace PhoneBookApp.Model
 
         public void UpdatePhoneNumbers(Contact contact, List<PhoneNumber> phoneNumbers)
         {
-            
+
             using (PhoneBookDBContext = new PhoneBookDBContext())
             {
                 Contact cn = PhoneBookDBContext.Contacts.Where(c => c.Id == contact.Id).FirstOrDefault();

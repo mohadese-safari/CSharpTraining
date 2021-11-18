@@ -83,6 +83,7 @@ namespace PhoneBookApp.View
             Enabled = true;
             Visible = true;
             BringToFront();
+            LoadContacts();
         }
        
 
@@ -112,6 +113,10 @@ namespace PhoneBookApp.View
             Enabled = false;
             Visible = false;
         }
+        private void LoadContacts()
+        {
+            LoadContacts(PhoneBookManager.GetAllContacts());
+        }
 
         private void LoadContacts(List<Contact> contacts)
         {
@@ -124,10 +129,6 @@ namespace PhoneBookApp.View
             }
         }
 
-        private void LoadContacts()
-        {
-            LoadContacts(PhoneBookManager.GetAllContacts());
-        }
 
         private void LoadContactAvatar(Contact contact)
         {

@@ -9,7 +9,7 @@ namespace PhoneBookApp.Model.Domain
 {
     class PhoneBookDBContext : DbContext
     {
-        public PhoneBookDBContext() : base("phonebook")
+        public PhoneBookDBContext() :  base("phonebook")
         {
             //Database.SetInitializer<StoreDbContext>(new <StoreDbContext>());
         }
