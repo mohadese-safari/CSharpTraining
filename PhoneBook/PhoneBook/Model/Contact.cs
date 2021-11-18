@@ -43,6 +43,12 @@ namespace PhoneBookApp.Model
             ImageUrl = imageUrl;
         }
 
+
+        public Contact(string name, string lastName, string email, string imageUrl) : this(name, lastName, email)
+        {
+            ImageUrl = imageUrl;
+        }
+
         public string FullName
         {
             get

@@ -41,12 +41,12 @@ namespace PhoneBookApp.View
             this.middlePanel = new System.Windows.Forms.Panel();
             this.picBoxTelephoneIcon = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.addContactPicBox = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
             this.middlePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxTelephoneIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.addContactPicBox)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -158,17 +158,17 @@ namespace PhoneBookApp.View
             this.pictureBox2.TabIndex = 6;
             this.pictureBox2.TabStop = false;
             // 
-            // pictureBox1
+            // addContactPicBox
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(288, 461);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(83, 89);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.addContactPicBox.Image = ((System.Drawing.Image)(resources.GetObject("addContactPicBox.Image")));
+            this.addContactPicBox.Location = new System.Drawing.Point(288, 461);
+            this.addContactPicBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.addContactPicBox.Name = "addContactPicBox";
+            this.addContactPicBox.Size = new System.Drawing.Size(83, 89);
+            this.addContactPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.addContactPicBox.TabIndex = 2;
+            this.addContactPicBox.TabStop = false;
+            this.addContactPicBox.Click += new System.EventHandler(this.AddContactBtn_Clicked);
             // 
             // PhoneBookForm
             // 
@@ -183,13 +183,14 @@ namespace PhoneBookApp.View
             this.Controls.Add(this.middlePanel);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.txtSearchBox);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.addContactPicBox);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximizeBox = false;
             this.Name = "PhoneBookForm";
             this.Text = "Phone book";
+            this.Load += new System.EventHandler(this.PhoneBookForm_Load);
             this.EnabledChanged += new System.EventHandler(this.Form1_EnabledChanged);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -197,14 +198,14 @@ namespace PhoneBookApp.View
             this.middlePanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxTelephoneIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.addContactPicBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox addContactPicBox;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.TextBox txtSearchBox;
         private System.Windows.Forms.PictureBox pictureBox2;

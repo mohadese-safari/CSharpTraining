@@ -24,7 +24,7 @@ namespace PhoneBookApp.Model
 
         public PhoneBookManager() : this(new PhoneBook())
         {
-           // CreatePhoneBook();
+            // CreatePhoneBook();
         }
 
         //private void CreatePhoneBook()
@@ -35,7 +35,7 @@ namespace PhoneBookApp.Model
         //    }
         //}
 
-        public void AddNewContact(Contact newContact)
+        public Contact AddNewContact(Contact newContact)
         {
 
             if (string.IsNullOrWhiteSpace(newContact.FullName))
@@ -51,8 +51,10 @@ namespace PhoneBookApp.Model
             {
                 PhoneBookDBContext.Contacts.Add(newContact);
                 PhoneBookDBContext.SaveChanges();
+                return newContact;
             }
-            PhoneBook.Contacts.Add(newContact);
+            return null;
+            //PhoneBook.Contacts.Add(newContact);
         }
 
         public void RemoveContact(Contact toBeRemovedContact)
@@ -69,11 +71,40 @@ namespace PhoneBookApp.Model
             return PhoneBook.Contacts.Where(f => f.Equals(newContact)).Count() > 0;
         }
 
-        public IEnumerable<Contact> GetAllContacts()
+
+        public List<PhoneNumber> GetContactPhoneNumbers(Contact contact)
         {
             using (PhoneBookDBContext = new PhoneBookDBContext())
             {
-                return PhoneBookDBContext.Contacts;
+                //Fluent linq
+                //var result = from c in PhoneBookDBContext.Contacts
+                //             from p in PhoneBookDBContext.phoneNumbers
+                //             where c.Id == contact.Id
+                //             select c.PhoneNumbers;
+                //return result.FirstOrDefault();
+
+                //Linq query
+                var result = PhoneBookDBContext.Contacts.Where(c => c.Id == contact.Id).SelectMany(c => c.PhoneNumbers);
+                return result.ToList();
+            }
+            
+        }
+        public List<Contact> GetAllContacts()
+        {         
+            using (PhoneBookDBContext = new PhoneBookDBContext())            {
+                List<Contact> allContacts = PhoneBookDBContext.Contacts.ToList();
+                return allContacts;
+            }
+        }
+
+        public void UpdatePhoneNumbers(Contact contact, List<PhoneNumber> phoneNumbers)
+        {
+            
+            using (PhoneBookDBContext = new PhoneBookDBContext())
+            {
+                Contact cn = PhoneBookDBContext.Contacts.Where(c => c.Id == contact.Id).FirstOrDefault();
+                cn.PhoneNumbers = phoneNumbers;
+                PhoneBookDBContext.SaveChanges();
             }
         }
     }

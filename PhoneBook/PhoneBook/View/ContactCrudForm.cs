@@ -19,9 +19,11 @@ namespace PhoneBookApp.View
         readonly Bitmap defaultAvatar = global::PhoneBookApp.Properties.Resources.avatar_default_icon;
 
         private Contact CurrentContact { get; set; }
-        public ContactCrudForm(Contact contact) : this()
+        private List<PhoneNumber> PhoneNumbers { get; set; }
+        public ContactCrudForm(Contact contact, List<PhoneNumber> phoneNumbers) : this()
         {
             CurrentContact = contact;
+            PhoneNumbers = phoneNumbers;
             LoadSavedContact();
             picBoxDeleteContact.Visible = true;
         }
@@ -38,24 +40,25 @@ namespace PhoneBookApp.View
             txtFirstName.Text = CurrentContact.FirstName;
             txtLastName.Text = CurrentContact.LastName;
             txtEmail.Text = CurrentContact.Email;
-            txtMskPhone1.Text = CurrentContact.PhoneNumbers?[0].Number;
-            cmbBoxPhoneLabel.Text = CurrentContact.PhoneNumbers?[0].Label;
+            txtMskPhone1.Text = PhoneNumbers[0]?.Number;
+            cmbBoxPhoneLabel.Text = PhoneNumbers?[0].Label;
             picBoxAvatar.Image = CurrentContact.ImageUrl == null ? defaultAvatar : new Bitmap(CurrentContact.ImageUrl);
             picBoxAvatar.ImageLocation = CurrentContact.ImageUrl;
         }
 
-        private void SaveContact(Contact contact, string firstName, string lastName, string email, string imageUrl, List<PhoneNumber> phoneNumbers)
+        private Contact SaveContact(Contact contact, string firstName, string lastName, string email, string imageUrl)
         {
             contact.FirstName = firstName;
             contact.LastName = lastName;
             contact.Email = email;
             contact.ImageUrl = imageUrl;
-            contact.PhoneNumbers = phoneNumbers;
+            return contact;
         }
-        private void SaveContact(string firstName, string lastName, string email, string imageUrl, List<PhoneNumber> phoneNumbers)
+        private Contact SaveContact(string firstName, string lastName, string email, string imageUrl)
         {
-            Contact newContact = new Contact(firstName, lastName, email, phoneNumbers, imageUrl);
+            Contact newContact = new Contact(firstName, lastName, email, imageUrl);
             PhoneBookForm.OnAddContact(newContact);
+            return newContact;
         }
 
         private void ClearInputs()
@@ -101,14 +104,21 @@ namespace PhoneBookApp.View
             string phone = txtMskPhone1.Text;
             string phoneLabel = cmbBoxPhoneLabel.Text;
             string imageUrl = picBoxAvatar.ImageLocation;
-            List<PhoneNumber> phoneNumbers = new List<PhoneNumber>
+
+            Contact contact;
+            if (CurrentContact == null)
+                contact = SaveContact(firstName, lastName, email, imageUrl);
+            else
+                contact = SaveContact(CurrentContact, firstName, lastName, email, imageUrl);
+
+            if (phone != null && contact!=null)
+            {
+                List<PhoneNumber> phoneNumbers = new List<PhoneNumber>
             {
                 new PhoneNumber(phone,phoneLabel)
             };
-            if (CurrentContact == null)
-                SaveContact(firstName, lastName, email, imageUrl, phoneNumbers);
-            else
-                SaveContact(CurrentContact, firstName, lastName, email, imageUrl, phoneNumbers);
+                PhoneBookForm.OnUpdatePhone(contact, phoneNumbers);
+            }
 
             Dispose();
             PhoneBookForm.OnSaveContact();

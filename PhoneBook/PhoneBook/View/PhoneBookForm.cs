@@ -19,6 +19,7 @@ namespace PhoneBookApp.View
         public static OnEditContact OnEditContact { get; set; }
         public static OnSaveContact OnSaveContact { get; set; }
         public static OnDeleteContact OnDeleteContact { get; set; }
+        public static OnUpdatePhone OnUpdatePhone { get; set; }
 
         readonly Bitmap defaultAvatar = global::PhoneBookApp.Properties.Resources.avatar_default_icon;
         readonly int LBL_CONTACT_NAME_WIDTH;
@@ -31,15 +32,27 @@ namespace PhoneBookApp.View
             LBL_CONTACT_NAME_WIDTH = ClientSize.Width - 10;
             HorizontalScroll.Enabled = false;
             HorizontalScroll.Visible = false;
-            OnAddContact += OnAddContactAction;
-            OnSaveContact += OnSaveContactButtonPressed;
-            OnEditContact += OnEditContactButtonPressed;
-            OnDeleteContact += OnDeleteContactButtonPressed;
             HorizontalScroll.Enabled = false;
             HorizontalScroll.Visible = false;
             middlePanel.HorizontalScroll.Enabled = false;
             middlePanel.HorizontalScroll.Visible = false;
+            SetUpSubscribers();
+            RefreshForm();
+        }
 
+        private void SetUpSubscribers()
+        {
+            OnAddContact += OnAddContactAction;
+            OnSaveContact += OnSaveContactButtonPressed;
+            //OnEditContact += OnEditContactButtonPressed;
+            OnDeleteContact += OnDeleteContactButtonPressed;
+            OnUpdatePhone += OnUpdatePhoneAction;
+        }
+
+
+        public void OnUpdatePhoneAction(Contact contact, List<PhoneNumber> phoneNumbers)
+        {
+            PhoneBookManager.UpdatePhoneNumbers(contact, phoneNumbers);
         }
 
         private void OnAddContactAction(Contact contact)
@@ -58,12 +71,12 @@ namespace PhoneBookApp.View
 
         }
 
-        private void OnEditContactButtonPressed(Contact contact)
-        {
-            new ContactCrudForm(contact).Show();
-            Enabled = false;
-            Visible = false;
-        }
+        //private void OnEditContactButtonPressed(Contact contact)
+        //{
+        //    new ContactCrudForm(contact).Show();
+        //    Enabled = false;
+        //    Visible = false;
+        //}
 
         private void OnSaveContactButtonPressed()
         {
@@ -71,6 +84,7 @@ namespace PhoneBookApp.View
             Visible = true;
             BringToFront();
         }
+       
 
         private void OnDeleteContactButtonPressed(Contact contact)
         {
@@ -92,7 +106,7 @@ namespace PhoneBookApp.View
 
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void AddContactBtn_Clicked(object sender, EventArgs e)
         {
             new ContactCrudForm().Show();
             Enabled = false;
@@ -112,7 +126,7 @@ namespace PhoneBookApp.View
 
         private void LoadContacts()
         {
-            LoadContacts(PhoneBookManager.Contacts);
+            LoadContacts(PhoneBookManager.GetAllContacts());
         }
 
         private void LoadContactAvatar(Contact contact)
@@ -143,7 +157,8 @@ namespace PhoneBookApp.View
         {
             var label = sender as Label;
             Contact contatct = label.Tag as Contact;
-            new ContactCrudForm(contatct).Show();
+            var phoneNumbers = PhoneBookManager.GetContactPhoneNumbers(contatct);
+            new ContactCrudForm(contatct, phoneNumbers).Show();
         }
 
         private void ClearLayout(int newRowCount)
@@ -188,13 +203,22 @@ namespace PhoneBookApp.View
 
         private void Form1_EnabledChanged(object sender, EventArgs e)
         {
+            RefreshForm();
+        }
+
+        private void RefreshForm()
+        {
             if (PhoneBookManager.Contacts.Count == 0)
                 ShowEmptyContactListMessage();
             else
                 HideEmptyContactListMessage();
-          
+
             LoadContacts();
         }
 
+        private void PhoneBookForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
