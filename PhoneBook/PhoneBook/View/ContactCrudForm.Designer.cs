@@ -43,15 +43,15 @@ namespace PhoneBookApp.View
             this.picBoxSaveContact = new System.Windows.Forms.PictureBox();
             this.saveAndDeletePanel = new System.Windows.Forms.Panel();
             this.contactDetailsPanel = new System.Windows.Forms.Panel();
+            this.picBoxAvatar = new PhoneBookApp.Model.OvalPictureBox();
             this.contactPhonePanel = new System.Windows.Forms.Panel();
             this.phonesTableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
-            this.picBoxAvatar = new PhoneBookApp.Model.OvalPictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxDeleteContact)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxSaveContact)).BeginInit();
             this.saveAndDeletePanel.SuspendLayout();
             this.contactDetailsPanel.SuspendLayout();
-            this.contactPhonePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxAvatar)).BeginInit();
+            this.contactPhonePanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtFirstName
@@ -159,6 +159,19 @@ namespace PhoneBookApp.View
             this.contactDetailsPanel.Size = new System.Drawing.Size(404, 470);
             this.contactDetailsPanel.TabIndex = 18;
             // 
+            // picBoxAvatar
+            // 
+            this.picBoxAvatar.BackColor = System.Drawing.Color.Transparent;
+            this.picBoxAvatar.Image = ((System.Drawing.Image)(resources.GetObject("picBoxAvatar.Image")));
+            this.picBoxAvatar.Location = new System.Drawing.Point(153, 9);
+            this.picBoxAvatar.Name = "picBoxAvatar";
+            this.picBoxAvatar.Padding = new System.Windows.Forms.Padding(10);
+            this.picBoxAvatar.Size = new System.Drawing.Size(121, 108);
+            this.picBoxAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picBoxAvatar.TabIndex = 16;
+            this.picBoxAvatar.TabStop = false;
+            this.picBoxAvatar.Click += new System.EventHandler(this.picBoxAvatar_Click);
+            // 
             // contactPhonePanel
             // 
             this.contactPhonePanel.AutoScroll = true;
@@ -174,9 +187,10 @@ namespace PhoneBookApp.View
             this.phonesTableLayoutPanel.AutoScroll = true;
             this.phonesTableLayoutPanel.AutoSize = true;
             this.phonesTableLayoutPanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.phonesTableLayoutPanel.ColumnCount = 2;
-            this.phonesTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 37.62376F));
-            this.phonesTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 62.37624F));
+            this.phonesTableLayoutPanel.ColumnCount = 3;
+            this.phonesTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 44.91018F));
+            this.phonesTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 55.08982F));
+            this.phonesTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 71F));
             this.phonesTableLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.phonesTableLayoutPanel.Location = new System.Drawing.Point(0, 0);
             this.phonesTableLayoutPanel.Name = "phonesTableLayoutPanel";
@@ -186,19 +200,6 @@ namespace PhoneBookApp.View
             this.phonesTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.phonesTableLayoutPanel.Size = new System.Drawing.Size(404, 140);
             this.phonesTableLayoutPanel.TabIndex = 13;
-            // 
-            // picBoxAvatar
-            // 
-            this.picBoxAvatar.BackColor = System.Drawing.Color.Transparent;
-            this.picBoxAvatar.Image = ((System.Drawing.Image)(resources.GetObject("picBoxAvatar.Image")));
-            this.picBoxAvatar.Location = new System.Drawing.Point(153, 9);
-            this.picBoxAvatar.Name = "picBoxAvatar";
-            this.picBoxAvatar.Padding = new System.Windows.Forms.Padding(10);
-            this.picBoxAvatar.Size = new System.Drawing.Size(121, 108);
-            this.picBoxAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picBoxAvatar.TabIndex = 16;
-            this.picBoxAvatar.TabStop = false;
-            this.picBoxAvatar.Click += new System.EventHandler(this.picBoxAvatar_Click);
             // 
             // ContactCrudForm
             // 
@@ -221,9 +222,9 @@ namespace PhoneBookApp.View
             this.saveAndDeletePanel.ResumeLayout(false);
             this.contactDetailsPanel.ResumeLayout(false);
             this.contactDetailsPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxAvatar)).EndInit();
             this.contactPhonePanel.ResumeLayout(false);
             this.contactPhonePanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picBoxAvatar)).EndInit();
             this.ResumeLayout(false);
 
         }

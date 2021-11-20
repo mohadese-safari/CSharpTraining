@@ -76,6 +76,19 @@ namespace PhoneBookApp.View
             return textBox;
         }
 
+        public PictureBox InitRemovePhonePictureBox()
+        {
+            var pictureBox = new PictureBox();
+            pictureBox.Anchor = ((AnchorStyles.Top | AnchorStyles.Bottom) | AnchorStyles.Left) | AnchorStyles.Right;
+            pictureBox.Image = new Bitmap(@"F:\SG C# course\training\PhoneBook\PhoneBook\images\close.png");
+            pictureBox.Size = new Size(66, 35);
+            pictureBox.SizeMode = PictureBoxSizeMode.CenterImage;
+            pictureBox.TabIndex = 0;
+            pictureBox.TabStop = false;
+           
+            return pictureBox;
+        }
+
         private void LoadSavedContact()
         {
             txtFirstName.Text = CurrentContact.FirstName;
@@ -108,12 +121,20 @@ namespace PhoneBookApp.View
         {
             var cmbBox = InitComboBox(phoneNumber.Label);
             var maskedTxtBox = InitMaskedTextBox(phoneNumber.Number);
+            var removePhoneIcon = InitRemovePhonePictureBox();
             cmbBoxPhoneLabels.Add(cmbBox);
             txtPhoneNumbers.Add(maskedTxtBox);
             phonesTableLayoutPanel.Controls.Add(cmbBox);
             phonesTableLayoutPanel.Controls.Add(maskedTxtBox);
-            maskedTxtBox.Tag = phoneNumber;
-           // PhoneNumbers.Add(phoneNumber);
+            phonesTableLayoutPanel.Controls.Add(removePhoneIcon);
+            removePhoneIcon.Click += (object sender,EventArgs args) =>
+            {
+                maskedTxtBox.Text = null;
+                phonesTableLayoutPanel.Controls.Remove(cmbBox);
+                phonesTableLayoutPanel.Controls.Remove(maskedTxtBox);
+                phonesTableLayoutPanel.Controls.Remove(removePhoneIcon);                
+            };
+
         }
 
         private Contact SaveContactInfo(Contact contact, string firstName, string lastName, string email, string imageUrl)

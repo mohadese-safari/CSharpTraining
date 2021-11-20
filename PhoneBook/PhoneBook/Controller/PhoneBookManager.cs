@@ -135,13 +135,6 @@ namespace PhoneBookApp.Model
         public void UpdatePhoneNumbers(Contact contact, List<PhoneNumber> phoneNumbers)
         {
 
-            //using (PhoneBookDBContext = new PhoneBookDBContext())
-            //{
-            //    Contact cn = PhoneBookDBContext.Contacts.Where(c => c.Id == contact.Id).FirstOrDefault();
-            //    cn.PhoneNumbers = phoneNumbers;
-            //    PhoneBookDBContext.SaveChanges();
-            //}
-
             using (PhoneBookDBContext = new PhoneBookDBContext())
             {
                 foreach (var phone in phoneNumbers)
@@ -151,9 +144,8 @@ namespace PhoneBookApp.Model
                     {
                         Contact cn = PhoneBookDBContext.Contacts.Where(c => c.Id == contact.Id).FirstOrDefault();
                         cn.PhoneNumbers = new List<PhoneNumber>() { phone };
-                        //PhoneBookDBContext.phoneNumbers.Add(phone);
                     }
-                    else if (phone.Number == null)
+                    else if (string.IsNullOrWhiteSpace(phone.Number))
                     {
                         PhoneBookDBContext.phoneNumbers.Remove(fetchedPhoneNumber);
                     }
