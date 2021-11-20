@@ -44,15 +44,19 @@ namespace PhoneBookApp.View
         {
             OnAddContact += OnAddContactAction;
             OnSaveContact += OnSaveContactButtonPressed;
-            //OnEditContact += OnEditContactButtonPressed;
+            OnEditContact += OnEditContactAction;
             OnDeleteContact += OnDeleteContactButtonPressed;
             OnUpdatePhone += OnUpdatePhoneAction;
         }
 
+        private void OnEditContactAction(Contact contact)
+        {
+            PhoneBookManager.UpdateContactInfo(contact);
+        }
 
         public void OnUpdatePhoneAction(Contact contact, List<PhoneNumber> phoneNumbers)
         {
-            PhoneBookManager.UpdatePhoneNumbers(contact, phoneNumbers);
+            PhoneBookManager.UpdatePhoneNumbers(contact,phoneNumbers);
         }
 
         private void OnAddContactAction(Contact contact)
@@ -209,8 +213,9 @@ namespace PhoneBookApp.View
 
         private void RefreshForm()
         {
-            if (PhoneBookManager.Contacts.Count == 0)
-                ShowEmptyContactListMessage();
+            if (PhoneBookManager.Contacts.Count == 0) 
+            HideEmptyContactListMessage();
+            //ShowEmptyContactListMessage();
             else
                 HideEmptyContactListMessage();
 
@@ -219,7 +224,7 @@ namespace PhoneBookApp.View
 
         private void PhoneBookForm_Load(object sender, EventArgs e)
         {
-
+            PhoneBookManager.TestAttach();
         }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -54,7 +55,6 @@ namespace PhoneBookApp.Model
                 return newContact;
             }
 
-            //PhoneBook.Contacts.Add(newContact);
         }
 
         public void RemoveContact(Contact toBeRemovedContact)
@@ -92,12 +92,13 @@ namespace PhoneBookApp.Model
         {
             using (PhoneBookDBContext = new PhoneBookDBContext())
             {
-                //Fluent linq
+                #region Fluent linq
                 //var result = from c in PhoneBookDBContext.Contacts
                 //             from p in PhoneBookDBContext.phoneNumbers
                 //             where c.Id == contact.Id
                 //             select c.PhoneNumbers;
                 //return result.FirstOrDefault();
+                #endregion
 
                 //Linq query
                 var result = PhoneBookDBContext.Contacts.Where(c => c.Id == contact.Id).SelectMany(c => c.PhoneNumbers);
@@ -114,13 +115,72 @@ namespace PhoneBookApp.Model
             }
         }
 
+        public void UpdateContactInfo(Contact contact)
+        {
+            using (PhoneBookDBContext = new PhoneBookDBContext())
+            {
+                var toBeUpdatedContact = PhoneBookDBContext.Contacts.Where(c => c.Id == contact.Id).FirstOrDefault();
+                if (toBeUpdatedContact == null)
+                {
+                    throw new InvalidContactException();
+                }
+                toBeUpdatedContact.FirstName = contact.FirstName;
+                toBeUpdatedContact.LastName = contact.LastName;
+                toBeUpdatedContact.Email = contact.Email;
+                toBeUpdatedContact.ImageUrl = contact.ImageUrl;
+                PhoneBookDBContext.SaveChanges();
+            }
+        }
+
         public void UpdatePhoneNumbers(Contact contact, List<PhoneNumber> phoneNumbers)
         {
 
+            //using (PhoneBookDBContext = new PhoneBookDBContext())
+            //{
+            //    Contact cn = PhoneBookDBContext.Contacts.Where(c => c.Id == contact.Id).FirstOrDefault();
+            //    cn.PhoneNumbers = phoneNumbers;
+            //    PhoneBookDBContext.SaveChanges();
+            //}
+
             using (PhoneBookDBContext = new PhoneBookDBContext())
             {
-                Contact cn = PhoneBookDBContext.Contacts.Where(c => c.Id == contact.Id).FirstOrDefault();
-                cn.PhoneNumbers = phoneNumbers;
+                foreach (var phone in phoneNumbers)
+                {
+                    var fetchedPhoneNumber = PhoneBookDBContext.phoneNumbers.Where(p => p.Id == phone.Id).FirstOrDefault();
+                    if (fetchedPhoneNumber == null)
+                    {
+                        Contact cn = PhoneBookDBContext.Contacts.Where(c => c.Id == contact.Id).FirstOrDefault();
+                        cn.PhoneNumbers = new List<PhoneNumber>() { phone };
+                        //PhoneBookDBContext.phoneNumbers.Add(phone);
+                    }
+                    else if (phone.Number == null)
+                    {
+                        PhoneBookDBContext.phoneNumbers.Remove(fetchedPhoneNumber);
+                    }
+                    else
+                    {
+                        fetchedPhoneNumber.Number = phone.Number;
+                    }
+                }
+
+                PhoneBookDBContext.SaveChanges();
+            }
+        }
+
+        public void TestAttach()
+        {
+            PhoneNumber phoneNumber = new PhoneNumber()
+            {
+                Id = 1,
+                Number = "1111111",
+                Label = "Home"
+            };
+
+            using (PhoneBookDBContext = new PhoneBookDBContext())
+            {
+                PhoneBookDBContext.Entry(phoneNumber).State = EntityState.Modified;
+                PhoneBookDBContext.phoneNumbers.Attach(phoneNumber);
+
                 PhoneBookDBContext.SaveChanges();
             }
         }

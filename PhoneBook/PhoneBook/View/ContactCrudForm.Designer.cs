@@ -37,22 +37,17 @@ namespace PhoneBookApp.View
             this.txtLastName = new System.Windows.Forms.TextBox();
             this.lblName = new System.Windows.Forms.Label();
             this.lblLastName = new System.Windows.Forms.Label();
-            this.lblPhone1 = new System.Windows.Forms.Label();
-            this.txtMskPhone1 = new System.Windows.Forms.MaskedTextBox();
             this.lblEmail = new System.Windows.Forms.Label();
             this.txtEmail = new System.Windows.Forms.TextBox();
-            this.lblPhoneLabel1 = new System.Windows.Forms.Label();
-            this.cmbBoxPhoneLabel = new System.Windows.Forms.ComboBox();
             this.picBoxDeleteContact = new System.Windows.Forms.PictureBox();
             this.picBoxSaveContact = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.saveAndDeletePanel = new System.Windows.Forms.Panel();
             this.contactDetailsPanel = new System.Windows.Forms.Panel();
             this.contactPhonePanel = new System.Windows.Forms.Panel();
+            this.phonesTableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.picBoxAvatar = new PhoneBookApp.Model.OvalPictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxDeleteContact)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxSaveContact)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.saveAndDeletePanel.SuspendLayout();
             this.contactDetailsPanel.SuspendLayout();
             this.contactPhonePanel.SuspendLayout();
@@ -97,25 +92,6 @@ namespace PhoneBookApp.View
             this.lblLastName.TabIndex = 4;
             this.lblLastName.Text = "Last name";
             // 
-            // lblPhone1
-            // 
-            this.lblPhone1.AutoSize = true;
-            this.lblPhone1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPhone1.Location = new System.Drawing.Point(39, 13);
-            this.lblPhone1.Name = "lblPhone1";
-            this.lblPhone1.Size = new System.Drawing.Size(69, 25);
-            this.lblPhone1.TabIndex = 7;
-            this.lblPhone1.Text = "Phone";
-            // 
-            // txtMskPhone1
-            // 
-            this.txtMskPhone1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMskPhone1.Location = new System.Drawing.Point(152, 11);
-            this.txtMskPhone1.Mask = "#######";
-            this.txtMskPhone1.Name = "txtMskPhone1";
-            this.txtMskPhone1.Size = new System.Drawing.Size(185, 30);
-            this.txtMskPhone1.TabIndex = 8;
-            // 
             // lblEmail
             // 
             this.lblEmail.AutoSize = true;
@@ -134,24 +110,6 @@ namespace PhoneBookApp.View
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(185, 30);
             this.txtEmail.TabIndex = 9;
-            // 
-            // lblPhoneLabel1
-            // 
-            this.lblPhoneLabel1.AutoSize = true;
-            this.lblPhoneLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPhoneLabel1.Location = new System.Drawing.Point(40, 51);
-            this.lblPhoneLabel1.Name = "lblPhoneLabel1";
-            this.lblPhoneLabel1.Size = new System.Drawing.Size(60, 25);
-            this.lblPhoneLabel1.TabIndex = 11;
-            this.lblPhoneLabel1.Text = "Label";
-            // 
-            // cmbBoxPhoneLabel
-            // 
-            this.cmbBoxPhoneLabel.FormattingEnabled = true;
-            this.cmbBoxPhoneLabel.Location = new System.Drawing.Point(152, 52);
-            this.cmbBoxPhoneLabel.Name = "cmbBoxPhoneLabel";
-            this.cmbBoxPhoneLabel.Size = new System.Drawing.Size(133, 24);
-            this.cmbBoxPhoneLabel.TabIndex = 12;
             // 
             // picBoxDeleteContact
             // 
@@ -175,16 +133,6 @@ namespace PhoneBookApp.View
             this.picBoxSaveContact.TabStop = false;
             this.picBoxSaveContact.Click += new System.EventHandler(this.lblSaveContact_Click);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(344, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(37, 41);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 13;
-            this.pictureBox1.TabStop = false;
-            // 
             // saveAndDeletePanel
             // 
             this.saveAndDeletePanel.BackColor = System.Drawing.Color.Transparent;
@@ -205,22 +153,39 @@ namespace PhoneBookApp.View
             this.contactDetailsPanel.Controls.Add(this.lblLastName);
             this.contactDetailsPanel.Controls.Add(this.lblEmail);
             this.contactDetailsPanel.Controls.Add(this.txtEmail);
+            this.contactDetailsPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.contactDetailsPanel.Location = new System.Drawing.Point(0, 46);
             this.contactDetailsPanel.Name = "contactDetailsPanel";
-            this.contactDetailsPanel.Size = new System.Drawing.Size(404, 292);
+            this.contactDetailsPanel.Size = new System.Drawing.Size(404, 470);
             this.contactDetailsPanel.TabIndex = 18;
             // 
             // contactPhonePanel
             // 
-            this.contactPhonePanel.Controls.Add(this.lblPhoneLabel1);
-            this.contactPhonePanel.Controls.Add(this.lblPhone1);
-            this.contactPhonePanel.Controls.Add(this.txtMskPhone1);
-            this.contactPhonePanel.Controls.Add(this.pictureBox1);
-            this.contactPhonePanel.Controls.Add(this.cmbBoxPhoneLabel);
-            this.contactPhonePanel.Location = new System.Drawing.Point(0, 342);
+            this.contactPhonePanel.AutoScroll = true;
+            this.contactPhonePanel.Controls.Add(this.phonesTableLayoutPanel);
+            this.contactPhonePanel.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.contactPhonePanel.Location = new System.Drawing.Point(0, 376);
             this.contactPhonePanel.Name = "contactPhonePanel";
-            this.contactPhonePanel.Size = new System.Drawing.Size(404, 162);
+            this.contactPhonePanel.Size = new System.Drawing.Size(404, 140);
             this.contactPhonePanel.TabIndex = 19;
+            // 
+            // phonesTableLayoutPanel
+            // 
+            this.phonesTableLayoutPanel.AutoScroll = true;
+            this.phonesTableLayoutPanel.AutoSize = true;
+            this.phonesTableLayoutPanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.phonesTableLayoutPanel.ColumnCount = 2;
+            this.phonesTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 37.62376F));
+            this.phonesTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 62.37624F));
+            this.phonesTableLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.phonesTableLayoutPanel.Location = new System.Drawing.Point(0, 0);
+            this.phonesTableLayoutPanel.Name = "phonesTableLayoutPanel";
+            this.phonesTableLayoutPanel.RowCount = 3;
+            this.phonesTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 46.15385F));
+            this.phonesTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 53.84615F));
+            this.phonesTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.phonesTableLayoutPanel.Size = new System.Drawing.Size(404, 140);
+            this.phonesTableLayoutPanel.TabIndex = 13;
             // 
             // picBoxAvatar
             // 
@@ -245,13 +210,14 @@ namespace PhoneBookApp.View
             this.Controls.Add(this.contactPhonePanel);
             this.Controls.Add(this.contactDetailsPanel);
             this.Controls.Add(this.saveAndDeletePanel);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "ContactCrudForm";
             this.Text = "Add/Modify contact";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.CRUDForm_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.picBoxDeleteContact)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxSaveContact)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.saveAndDeletePanel.ResumeLayout(false);
             this.contactDetailsPanel.ResumeLayout(false);
             this.contactDetailsPanel.PerformLayout();
@@ -267,18 +233,14 @@ namespace PhoneBookApp.View
         private System.Windows.Forms.TextBox txtLastName;
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.Label lblLastName;
-        private System.Windows.Forms.Label lblPhone1;
-        private System.Windows.Forms.MaskedTextBox txtMskPhone1;
         private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.TextBox txtEmail;
-        private System.Windows.Forms.Label lblPhoneLabel1;
-        private System.Windows.Forms.ComboBox cmbBoxPhoneLabel;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox picBoxSaveContact;
         private System.Windows.Forms.PictureBox picBoxDeleteContact;
         private OvalPictureBox picBoxAvatar;
         private System.Windows.Forms.Panel saveAndDeletePanel;
         private System.Windows.Forms.Panel contactDetailsPanel;
         private System.Windows.Forms.Panel contactPhonePanel;
+        private System.Windows.Forms.TableLayoutPanel phonesTableLayoutPanel;
     }
 }

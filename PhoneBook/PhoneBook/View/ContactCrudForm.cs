@@ -20,19 +20,60 @@ namespace PhoneBookApp.View
 
         private Contact CurrentContact { get; set; }
         private List<PhoneNumber> PhoneNumbers { get; set; }
-        public ContactCrudForm(Contact contact, List<PhoneNumber> phoneNumbers) : this()
+        private List<ComboBox> cmbBoxPhoneLabels { get; set; } = new List<ComboBox>();
+        private List<MaskedTextBox> txtPhoneNumbers { get; set; } = new List<MaskedTextBox>();
+        private string[] ComboBoxSuggestions { get; }
+        public ContactCrudForm(Contact contact, List<PhoneNumber> phoneNumbers)
         {
+            ComboBoxSuggestions = GetComboBoxSuggestions();
+            InitializeComponent();
             CurrentContact = contact;
             PhoneNumbers = phoneNumbers;
             LoadSavedContact();
             picBoxDeleteContact.Visible = true;
+           
         }
         public ContactCrudForm()
         {
+            ComboBoxSuggestions = GetComboBoxSuggestions();
             InitializeComponent();
-            string[] comboBoxSuggestions = Enum.GetNames(typeof(SuggestingLabel));
-            cmbBoxPhoneLabel.Items.AddRange(comboBoxSuggestions);
             picBoxDeleteContact.Visible = false;
+            PhoneNumbers = new List<PhoneNumber>();
+            AddPhoneRow();
+        }
+
+        public string[] GetComboBoxSuggestions()
+        {
+            return Enum.GetNames(typeof(SuggestingLabel));
+        }
+
+        public ComboBox InitComboBox(string text)
+        {
+            ComboBox comboBox = new ComboBox();
+            comboBox.Anchor = ((AnchorStyles.Top | AnchorStyles.Bottom) | AnchorStyles.Left) | AnchorStyles.Right;
+            comboBox.FormattingEnabled = true;
+            comboBox.Location = new Point(10, 108);
+            comboBox.Margin = new Padding(10, 0, 10, 3);
+            comboBox.Name = "comboBox1";
+            comboBox.Size = new System.Drawing.Size(129, 24);
+            comboBox.TabIndex = 13;
+            comboBox.Text = text;
+            comboBox.Items.AddRange(ComboBoxSuggestions);
+            return comboBox;
+        }
+
+        public MaskedTextBox InitMaskedTextBox(string text)
+        {
+            var textBox = new MaskedTextBox();
+            textBox.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
+            textBox.Location = new Point(152, 53);
+            textBox.Mask = "#######";
+            textBox.Name = "maskedTextBox1";
+            textBox.Size = new Size(160, 30);
+            textBox.MaximumSize = new Size(160, 30);
+            textBox.TabIndex = 10;
+            textBox.Text = text;
+            return textBox;
         }
 
         private void LoadSavedContact()
@@ -40,10 +81,39 @@ namespace PhoneBookApp.View
             txtFirstName.Text = CurrentContact.FirstName;
             txtLastName.Text = CurrentContact.LastName;
             txtEmail.Text = CurrentContact.Email;
-            txtMskPhone1.Text = PhoneNumbers[0]?.Number;
-            cmbBoxPhoneLabel.Text = PhoneNumbers?[0].Label;
+            if (PhoneNumbers.Count > 0)
+            {
+                for (int i = 0; i < PhoneNumbers.Count; i++)
+                {
+                    AddPhoneRow(PhoneNumbers[i]);
+                }
+            }
+            else
+            {
+                AddPhoneRow();
+            }
             picBoxAvatar.Image = CurrentContact.ImageUrl == null ? defaultAvatar : new Bitmap(CurrentContact.ImageUrl);
             picBoxAvatar.ImageLocation = CurrentContact.ImageUrl;
+        }
+
+        //Adding empty phone row
+        private void AddPhoneRow()
+        {
+            PhoneNumber newPhone = new PhoneNumber() { Number = null, Label = SuggestingLabel.Mobile.ToString() };
+            PhoneNumbers.Add(newPhone);
+            AddPhoneRow(newPhone);
+        }
+
+        private void AddPhoneRow(PhoneNumber phoneNumber)
+        {
+            var cmbBox = InitComboBox(phoneNumber.Label);
+            var maskedTxtBox = InitMaskedTextBox(phoneNumber.Number);
+            cmbBoxPhoneLabels.Add(cmbBox);
+            txtPhoneNumbers.Add(maskedTxtBox);
+            phonesTableLayoutPanel.Controls.Add(cmbBox);
+            phonesTableLayoutPanel.Controls.Add(maskedTxtBox);
+            maskedTxtBox.Tag = phoneNumber;
+           // PhoneNumbers.Add(phoneNumber);
         }
 
         private Contact SaveContactInfo(Contact contact, string firstName, string lastName, string email, string imageUrl)
@@ -61,12 +131,6 @@ namespace PhoneBookApp.View
             return newContact;
         }
 
-        private void ClearInputs()
-        {
-            txtFirstName.Clear();
-            txtLastName.Clear();
-            txtMskPhone1.Clear();
-        }
 
         private void picBoxAvatar_Click(object sender, EventArgs e)
         {
@@ -101,8 +165,6 @@ namespace PhoneBookApp.View
             string firstName = txtFirstName.Text;
             string lastName = txtLastName.Text;
             string email = txtEmail.Text;
-            string phone = txtMskPhone1.Text;
-            string phoneLabel = cmbBoxPhoneLabel.Text;
             string imageUrl = picBoxAvatar.ImageLocation;
 
             if (CurrentContact == null)
@@ -110,16 +172,15 @@ namespace PhoneBookApp.View
             else
                 CurrentContact = SaveContactInfo(CurrentContact, firstName, lastName, email, imageUrl);
 
+            PhoneBookForm.OnEditContact(CurrentContact);
 
 
-            if (phone != null && CurrentContact != null)
+            for(int i = 0; i < txtPhoneNumbers.Count; i++)
             {
-                List<PhoneNumber> phoneNumbers = new List<PhoneNumber>
-            {
-                new PhoneNumber(phone,phoneLabel)
-            };
-                PhoneBookForm.OnUpdatePhone(CurrentContact, phoneNumbers);
+                PhoneNumbers[i].Number = txtPhoneNumbers[i].Text;
+                PhoneNumbers[i].Label = cmbBoxPhoneLabels[i].Text;
             }
+            PhoneBookForm.OnUpdatePhone(CurrentContact, PhoneNumbers);
 
             Dispose();
             PhoneBookForm.OnSaveContact();
@@ -130,6 +191,11 @@ namespace PhoneBookApp.View
             PhoneBookForm.OnDeleteContact(CurrentContact);
             Dispose();
         }
-
+        private void ClearInputs()
+        {
+            txtFirstName.Clear();
+            txtLastName.Clear();
+            //txtMskPhone1.Clear();
+        }
     }
 }
