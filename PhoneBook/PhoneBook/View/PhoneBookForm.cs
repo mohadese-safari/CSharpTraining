@@ -56,17 +56,18 @@ namespace PhoneBookApp.View
 
         public void OnUpdatePhoneAction(Contact contact, List<PhoneNumber> phoneNumbers)
         {
-            PhoneBookManager.UpdatePhoneNumbers(contact,phoneNumbers);
+            PhoneBookManager.UpdatePhoneNumbers(contact, phoneNumbers);
         }
 
         private void OnAddContactAction(Contact contact)
         {
-            try {
+            try
+            {
                 PhoneBookManager.AddNewContact(contact);
             }
-            catch (DuplicateContactFullNameException ex )
+            catch (DuplicateContactFullNameException ex)
             {
-                MessageBox.Show(ex.Message,ex.Title);
+                MessageBox.Show(ex.Message, ex.Title);
             }
             catch (EmptyContactCredientalsException ex)
             {
@@ -89,7 +90,7 @@ namespace PhoneBookApp.View
             BringToFront();
             LoadContacts();
         }
-       
+
 
         private void OnDeleteContactButtonPressed(Contact contact)
         {
@@ -102,7 +103,7 @@ namespace PhoneBookApp.View
             }
             catch (InvalidContactException ex)
             {
-                MessageBox.Show("Contact does not exist",ex.Message);
+                MessageBox.Show("Contact does not exist", ex.Message);
             }
             finally
             {
@@ -181,16 +182,7 @@ namespace PhoneBookApp.View
 
         private List<Contact> SearchContacts(string keyword)
         {
-            keyword = keyword.ToLower();
-            var searchResult = new List<Contact>();
-            foreach (Contact contact in PhoneBookManager.Contacts)
-            {
-                if (contact.FirstName.ToLower().Contains(keyword) ||
-                    contact.LastName.ToLower().Contains(keyword) ||
-                    contact.Email.ToLower().Contains(keyword))
-                    searchResult.Add(contact);
-            }
-            return searchResult;
+            return PhoneBookManager.SearchAllContacts(keyword);
         }
 
         private void ShowEmptyContactListMessage()
@@ -213,8 +205,8 @@ namespace PhoneBookApp.View
 
         private void RefreshForm()
         {
-            if (PhoneBookManager.Contacts.Count == 0) 
-            HideEmptyContactListMessage();
+            if (PhoneBookManager.Contacts.Count == 0)
+                HideEmptyContactListMessage();
             //ShowEmptyContactListMessage();
             else
                 HideEmptyContactListMessage();

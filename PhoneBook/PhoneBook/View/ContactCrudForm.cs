@@ -55,7 +55,7 @@ namespace PhoneBookApp.View
             comboBox.Location = new Point(10, 108);
             comboBox.Margin = new Padding(10, 0, 10, 3);
             comboBox.Name = "comboBox1";
-            comboBox.Size = new System.Drawing.Size(129, 24);
+            comboBox.Size = new Size(129, 24);
             comboBox.TabIndex = 13;
             comboBox.Text = text;
             comboBox.Items.AddRange(ComboBoxSuggestions);
@@ -67,7 +67,7 @@ namespace PhoneBookApp.View
             var textBox = new MaskedTextBox();
             textBox.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
             textBox.Location = new Point(152, 53);
-            textBox.Mask = "#######";
+            textBox.Mask = "###########";
             textBox.Name = "maskedTextBox1";
             textBox.Size = new Size(160, 30);
             textBox.MaximumSize = new Size(160, 30);

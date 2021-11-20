@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 using PhoneBookApp.Model.Domain;
@@ -82,6 +83,7 @@ namespace PhoneBookApp.Model
             }
         }
 
+        //TODO
         public bool ContactExists(Contact newContact)
         {
             return PhoneBook.Contacts.Where(f => f.Equals(newContact)).Count() > 0;
@@ -135,11 +137,13 @@ namespace PhoneBookApp.Model
         public void UpdatePhoneNumbers(Contact contact, List<PhoneNumber> phoneNumbers)
         {
 
+
             using (PhoneBookDBContext = new PhoneBookDBContext())
             {
                 foreach (var phone in phoneNumbers)
                 {
                     var fetchedPhoneNumber = PhoneBookDBContext.phoneNumbers.Where(p => p.Id == phone.Id).FirstOrDefault();
+
                     if (fetchedPhoneNumber == null)
                     {
                         Contact cn = PhoneBookDBContext.Contacts.Where(c => c.Id == contact.Id).FirstOrDefault();
@@ -159,6 +163,22 @@ namespace PhoneBookApp.Model
             }
         }
 
+        public List<Contact> SearchAllContacts(string keyword)
+        {
+            Expression<Func<Contact, bool>> expression = contact => contact.FirstName.ToLower().Contains(keyword) ||
+                     contact.LastName.ToLower().Contains(keyword) ||
+                     contact.Email.ToLower().Contains(keyword);
+            keyword = keyword.ToLower();
+            List<Contact> searchResult;
+            using (PhoneBookDBContext = new PhoneBookDBContext())
+            {
+                searchResult = PhoneBookDBContext.Contacts.Where(expression).ToList();
+            }
+            return searchResult;
+        }
+
+
+        #region Test Attach
         public void TestAttach()
         {
             PhoneNumber phoneNumber = new PhoneNumber()
@@ -176,5 +196,6 @@ namespace PhoneBookApp.Model
                 PhoneBookDBContext.SaveChanges();
             }
         }
+        #endregion
     }
 }

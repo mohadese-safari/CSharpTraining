@@ -19,7 +19,6 @@ namespace PhoneBookApp.Model
         public string Label { get; set; }
         public PhoneNumber()
         {
-
         }
 
         public PhoneNumber(string number)
