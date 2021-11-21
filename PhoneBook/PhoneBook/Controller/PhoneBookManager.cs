@@ -143,17 +143,17 @@ namespace PhoneBookApp.Model
                 foreach (var phone in phoneNumbers)
                 {
                     var fetchedPhoneNumber = PhoneBookDBContext.phoneNumbers.Where(p => p.Id == phone.Id).FirstOrDefault();
-
-                    if (fetchedPhoneNumber == null)
+                    var phoneNumberIsEmpty = string.IsNullOrWhiteSpace(phone.Number);
+                    if (fetchedPhoneNumber == null && !phoneNumberIsEmpty)
                     {
                         Contact cn = PhoneBookDBContext.Contacts.Where(c => c.Id == contact.Id).FirstOrDefault();
                         cn.PhoneNumbers = new List<PhoneNumber>() { phone };
                     }
-                    else if (string.IsNullOrWhiteSpace(phone.Number))
+                    else if (fetchedPhoneNumber != null && phoneNumberIsEmpty)
                     {
                         PhoneBookDBContext.phoneNumbers.Remove(fetchedPhoneNumber);
                     }
-                    else
+                    else if(!phoneNumberIsEmpty)
                     {
                         fetchedPhoneNumber.Number = phone.Number;
                     }
