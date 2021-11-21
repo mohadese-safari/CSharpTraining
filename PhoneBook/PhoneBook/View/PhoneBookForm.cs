@@ -1,14 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using PhoneBookApp.Model;
-using PhoneBookApp.Controller;
 using PhoneBookApp.PhoneBookExceptions;
 
 namespace PhoneBookApp.View
@@ -61,34 +55,15 @@ namespace PhoneBookApp.View
 
         private void OnAddContactAction(Contact contact)
         {
-            try
-            {
                 PhoneBookManager.AddNewContact(contact);
-            }
-            catch (DuplicateContactFullNameException ex)
-            {
-                MessageBox.Show(ex.Message, ex.Title);
-            }
-            catch (EmptyContactCredientalsException ex)
-            {
-                MessageBox.Show(ex.Message, ex.Title);
-            }
-
         }
-
-        //private void OnEditContactButtonPressed(Contact contact)
-        //{
-        //    new ContactCrudForm(contact).Show();
-        //    Enabled = false;
-        //    Visible = false;
-        //}
 
         private void OnSaveContactButtonPressed()
         {
             Enabled = true;
             Visible = true;
             BringToFront();
-            LoadContacts();
+            RefreshForm();
         }
 
 
@@ -107,7 +82,7 @@ namespace PhoneBookApp.View
             }
             finally
             {
-                LoadContacts();
+                RefreshForm();
             }
 
         }
@@ -118,9 +93,11 @@ namespace PhoneBookApp.View
             Enabled = false;
             Visible = false;
         }
-        private void LoadContacts()
+        private int LoadContacts()
         {
-            LoadContacts(PhoneBookManager.GetAllContacts());
+            var allContacts = PhoneBookManager.GetAllContacts();
+            LoadContacts(allContacts);
+            return allContacts.Count;
         }
 
         private void LoadContacts(List<Contact> contacts)
@@ -205,18 +182,11 @@ namespace PhoneBookApp.View
 
         private void RefreshForm()
         {
-            if (PhoneBookManager.Contacts.Count == 0)
-                HideEmptyContactListMessage();
-            //ShowEmptyContactListMessage();
+            var numOfContacts = LoadContacts();
+            if (numOfContacts == 0)
+                ShowEmptyContactListMessage();
             else
                 HideEmptyContactListMessage();
-
-            LoadContacts();
-        }
-
-        private void PhoneBookForm_Load(object sender, EventArgs e)
-        {
-            PhoneBookManager.TestAttach();
         }
     }
 }

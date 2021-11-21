@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
 using PhoneBookApp.Model.Domain;
 using PhoneBookApp.PhoneBookExceptions;
 
@@ -39,15 +37,7 @@ namespace PhoneBookApp.Model
 
         public Contact AddNewContact(Contact newContact)
         {
-
-            if (string.IsNullOrWhiteSpace(newContact.FullName))
-            {
-                throw new EmptyContactCredientalsException();
-            }
-            if (ContactExists(newContact))
-            {
-                throw new DuplicateContactFullNameException();
-            }
+            ValidateContactInfo(newContact);
 
             using (PhoneBookDBContext = new PhoneBookDBContext())
             {
@@ -56,6 +46,18 @@ namespace PhoneBookApp.Model
                 return newContact;
             }
 
+        }
+
+        private void ValidateContactInfo(Contact newContact)
+        {
+            if (string.IsNullOrWhiteSpace(newContact.FullName))
+            {
+                throw new EmptyContactCredientalsException();
+            }
+            if (ContactExists(newContact))
+            {
+                throw new DuplicateContactFullNameException();
+            }
         }
 
         public void RemoveContact(Contact toBeRemovedContact)
@@ -83,10 +85,14 @@ namespace PhoneBookApp.Model
             }
         }
 
-        //TODO
         public bool ContactExists(Contact newContact)
         {
-            return PhoneBook.Contacts.Where(f => f.Equals(newContact)).Count() > 0;
+            using (PhoneBookDBContext = new PhoneBookDBContext())
+            {
+                return PhoneBookDBContext.Contacts
+                    .Where(c => c.FirstName ==newContact.FirstName)
+                    .Where(c => c.LastName == newContact.LastName).Count() > 0;
+            }
         }
 
 
@@ -119,6 +125,7 @@ namespace PhoneBookApp.Model
 
         public void UpdateContactInfo(Contact contact)
         {
+            ValidateContactInfo(contact);
             using (PhoneBookDBContext = new PhoneBookDBContext())
             {
                 var toBeUpdatedContact = PhoneBookDBContext.Contacts.Where(c => c.Id == contact.Id).FirstOrDefault();
@@ -136,8 +143,6 @@ namespace PhoneBookApp.Model
 
         public void UpdatePhoneNumbers(Contact contact, List<PhoneNumber> phoneNumbers)
         {
-
-
             using (PhoneBookDBContext = new PhoneBookDBContext())
             {
                 foreach (var phone in phoneNumbers)

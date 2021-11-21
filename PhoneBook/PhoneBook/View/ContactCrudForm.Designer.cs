@@ -43,6 +43,10 @@ namespace PhoneBookApp.View
             this.picBoxSaveContact = new System.Windows.Forms.PictureBox();
             this.saveAndDeletePanel = new System.Windows.Forms.Panel();
             this.contactDetailsPanel = new System.Windows.Forms.Panel();
+            this.picBoxEditAvatar = new PhoneBookApp.Model.OvalPictureBox();
+            this.lblSepratorUp = new System.Windows.Forms.Label();
+            this.lblSepratorDown = new System.Windows.Forms.Label();
+            this.addRowPicBox = new System.Windows.Forms.PictureBox();
             this.picBoxAvatar = new PhoneBookApp.Model.OvalPictureBox();
             this.contactPhonePanel = new System.Windows.Forms.Panel();
             this.phonesTableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
@@ -50,6 +54,8 @@ namespace PhoneBookApp.View
             ((System.ComponentModel.ISupportInitialize)(this.picBoxSaveContact)).BeginInit();
             this.saveAndDeletePanel.SuspendLayout();
             this.contactDetailsPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxEditAvatar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.addRowPicBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxAvatar)).BeginInit();
             this.contactPhonePanel.SuspendLayout();
             this.SuspendLayout();
@@ -57,7 +63,7 @@ namespace PhoneBookApp.View
             // txtFirstName
             // 
             this.txtFirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFirstName.Location = new System.Drawing.Point(152, 129);
+            this.txtFirstName.Location = new System.Drawing.Point(152, 125);
             this.txtFirstName.MaxLength = 15;
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.Size = new System.Drawing.Size(185, 30);
@@ -66,7 +72,7 @@ namespace PhoneBookApp.View
             // txtLastName
             // 
             this.txtLastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLastName.Location = new System.Drawing.Point(152, 183);
+            this.txtLastName.Location = new System.Drawing.Point(152, 174);
             this.txtLastName.MaxLength = 15;
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.Size = new System.Drawing.Size(185, 30);
@@ -76,7 +82,7 @@ namespace PhoneBookApp.View
             // 
             this.lblName.AutoSize = true;
             this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName.Location = new System.Drawing.Point(35, 129);
+            this.lblName.Location = new System.Drawing.Point(35, 125);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(103, 25);
             this.lblName.TabIndex = 3;
@@ -86,7 +92,7 @@ namespace PhoneBookApp.View
             // 
             this.lblLastName.AutoSize = true;
             this.lblLastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLastName.Location = new System.Drawing.Point(35, 183);
+            this.lblLastName.Location = new System.Drawing.Point(35, 174);
             this.lblLastName.Name = "lblLastName";
             this.lblLastName.Size = new System.Drawing.Size(103, 25);
             this.lblLastName.TabIndex = 4;
@@ -96,7 +102,7 @@ namespace PhoneBookApp.View
             // 
             this.lblEmail.AutoSize = true;
             this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmail.Location = new System.Drawing.Point(39, 241);
+            this.lblEmail.Location = new System.Drawing.Point(39, 226);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(60, 25);
             this.lblEmail.TabIndex = 10;
@@ -105,7 +111,7 @@ namespace PhoneBookApp.View
             // txtEmail
             // 
             this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.Location = new System.Drawing.Point(152, 241);
+            this.txtEmail.Location = new System.Drawing.Point(152, 226);
             this.txtEmail.MaxLength = 15;
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(185, 30);
@@ -146,6 +152,10 @@ namespace PhoneBookApp.View
             // 
             // contactDetailsPanel
             // 
+            this.contactDetailsPanel.Controls.Add(this.picBoxEditAvatar);
+            this.contactDetailsPanel.Controls.Add(this.lblSepratorUp);
+            this.contactDetailsPanel.Controls.Add(this.lblSepratorDown);
+            this.contactDetailsPanel.Controls.Add(this.addRowPicBox);
             this.contactDetailsPanel.Controls.Add(this.picBoxAvatar);
             this.contactDetailsPanel.Controls.Add(this.txtFirstName);
             this.contactDetailsPanel.Controls.Add(this.lblName);
@@ -159,11 +169,52 @@ namespace PhoneBookApp.View
             this.contactDetailsPanel.Size = new System.Drawing.Size(404, 470);
             this.contactDetailsPanel.TabIndex = 18;
             // 
+            // picBoxEditAvatar
+            // 
+            this.picBoxEditAvatar.BackColor = System.Drawing.Color.Transparent;
+            this.picBoxEditAvatar.Image = ((System.Drawing.Image)(resources.GetObject("picBoxEditAvatar.Image")));
+            this.picBoxEditAvatar.Location = new System.Drawing.Point(153, 3);
+            this.picBoxEditAvatar.Name = "picBoxEditAvatar";
+            this.picBoxEditAvatar.Padding = new System.Windows.Forms.Padding(10);
+            this.picBoxEditAvatar.Size = new System.Drawing.Size(121, 108);
+            this.picBoxEditAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.picBoxEditAvatar.TabIndex = 22;
+            this.picBoxEditAvatar.TabStop = false;
+            this.picBoxEditAvatar.Visible = false;
+            this.picBoxEditAvatar.Click += new System.EventHandler(this.picBoxEditAvatar_Click);
+            // 
+            // lblSepratorUp
+            // 
+            this.lblSepratorUp.BackColor = System.Drawing.Color.LightGray;
+            this.lblSepratorUp.Location = new System.Drawing.Point(4, 1);
+            this.lblSepratorUp.Name = "lblSepratorUp";
+            this.lblSepratorUp.Size = new System.Drawing.Size(396, 2);
+            this.lblSepratorUp.TabIndex = 21;
+            // 
+            // lblSepratorDown
+            // 
+            this.lblSepratorDown.BackColor = System.Drawing.Color.LightGray;
+            this.lblSepratorDown.Location = new System.Drawing.Point(4, 274);
+            this.lblSepratorDown.Name = "lblSepratorDown";
+            this.lblSepratorDown.Size = new System.Drawing.Size(396, 2);
+            this.lblSepratorDown.TabIndex = 20;
+            // 
+            // addRowPicBox
+            // 
+            this.addRowPicBox.Image = ((System.Drawing.Image)(resources.GetObject("addRowPicBox.Image")));
+            this.addRowPicBox.Location = new System.Drawing.Point(14, 288);
+            this.addRowPicBox.Name = "addRowPicBox";
+            this.addRowPicBox.Size = new System.Drawing.Size(195, 36);
+            this.addRowPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.addRowPicBox.TabIndex = 19;
+            this.addRowPicBox.TabStop = false;
+            this.addRowPicBox.Click += new System.EventHandler(this.addRowPicBox_Click);
+            // 
             // picBoxAvatar
             // 
             this.picBoxAvatar.BackColor = System.Drawing.Color.Transparent;
             this.picBoxAvatar.Image = ((System.Drawing.Image)(resources.GetObject("picBoxAvatar.Image")));
-            this.picBoxAvatar.Location = new System.Drawing.Point(153, 9);
+            this.picBoxAvatar.Location = new System.Drawing.Point(153, 3);
             this.picBoxAvatar.Name = "picBoxAvatar";
             this.picBoxAvatar.Padding = new System.Windows.Forms.Padding(10);
             this.picBoxAvatar.Size = new System.Drawing.Size(121, 108);
@@ -171,6 +222,8 @@ namespace PhoneBookApp.View
             this.picBoxAvatar.TabIndex = 16;
             this.picBoxAvatar.TabStop = false;
             this.picBoxAvatar.Click += new System.EventHandler(this.picBoxAvatar_Click);
+            this.picBoxAvatar.MouseEnter += new System.EventHandler(this.picBoxAvatar_MouseEnter);
+            this.picBoxAvatar.MouseLeave += new System.EventHandler(this.picBoxAvatar_MouseLeave);
             // 
             // contactPhonePanel
             // 
@@ -190,7 +243,7 @@ namespace PhoneBookApp.View
             this.phonesTableLayoutPanel.ColumnCount = 3;
             this.phonesTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 44.91018F));
             this.phonesTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 55.08982F));
-            this.phonesTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 71F));
+            this.phonesTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 80F));
             this.phonesTableLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.phonesTableLayoutPanel.Location = new System.Drawing.Point(0, 0);
             this.phonesTableLayoutPanel.Name = "phonesTableLayoutPanel";
@@ -222,6 +275,8 @@ namespace PhoneBookApp.View
             this.saveAndDeletePanel.ResumeLayout(false);
             this.contactDetailsPanel.ResumeLayout(false);
             this.contactDetailsPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxEditAvatar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.addRowPicBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxAvatar)).EndInit();
             this.contactPhonePanel.ResumeLayout(false);
             this.contactPhonePanel.PerformLayout();
@@ -243,5 +298,9 @@ namespace PhoneBookApp.View
         private System.Windows.Forms.Panel contactDetailsPanel;
         private System.Windows.Forms.Panel contactPhonePanel;
         private System.Windows.Forms.TableLayoutPanel phonesTableLayoutPanel;
+        private System.Windows.Forms.PictureBox addRowPicBox;
+        private System.Windows.Forms.Label lblSepratorDown;
+        private System.Windows.Forms.Label lblSepratorUp;
+        private OvalPictureBox picBoxEditAvatar;
     }
 }

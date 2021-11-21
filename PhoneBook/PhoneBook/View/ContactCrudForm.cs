@@ -1,15 +1,9 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Resources;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using PhoneBookApp.Model;
+using PhoneBookApp.PhoneBookExceptions;
 
 namespace PhoneBookApp.View
 {
@@ -31,7 +25,6 @@ namespace PhoneBookApp.View
             PhoneNumbers = phoneNumbers;
             LoadSavedContact();
             picBoxDeleteContact.Visible = true;
-           
         }
         public ContactCrudForm()
         {
@@ -85,7 +78,7 @@ namespace PhoneBookApp.View
             pictureBox.SizeMode = PictureBoxSizeMode.CenterImage;
             pictureBox.TabIndex = 0;
             pictureBox.TabStop = false;
-           
+
             return pictureBox;
         }
 
@@ -127,12 +120,12 @@ namespace PhoneBookApp.View
             phonesTableLayoutPanel.Controls.Add(cmbBox);
             phonesTableLayoutPanel.Controls.Add(maskedTxtBox);
             phonesTableLayoutPanel.Controls.Add(removePhoneIcon);
-            removePhoneIcon.Click += (object sender,EventArgs args) =>
+            removePhoneIcon.Click += (object sender, EventArgs args) =>
             {
                 maskedTxtBox.Text = null;
                 phonesTableLayoutPanel.Controls.Remove(cmbBox);
                 phonesTableLayoutPanel.Controls.Remove(maskedTxtBox);
-                phonesTableLayoutPanel.Controls.Remove(removePhoneIcon);                
+                phonesTableLayoutPanel.Controls.Remove(removePhoneIcon);
             };
 
         }
@@ -155,6 +148,11 @@ namespace PhoneBookApp.View
 
         private void picBoxAvatar_Click(object sender, EventArgs e)
         {
+            PickAvatarImage();
+        }
+
+        private void PickAvatarImage()
+        {
             var imageChooserDialog = new OpenFileDialog
             {
                 Filter = "Image files (*.JPG;*.PNG)|*.JPG;*.PNG"
@@ -162,6 +160,7 @@ namespace PhoneBookApp.View
             var result = imageChooserDialog.ShowDialog();
             if (result == DialogResult.OK)
             {
+                #region working on resources ...
                 //using (ResXResourceReader resxReader = new ResXResourceReader(@"..\..\Properties\Resources.resx"))
                 //{
                 //    foreach (DictionaryEntry entry in resxReader)
@@ -170,6 +169,8 @@ namespace PhoneBookApp.View
 
                 //    }
                 //}
+                #endregion
+
                 string imageUrl = imageChooserDialog.FileName;
                 picBoxAvatar.Image = new Bitmap(imageUrl);
                 picBoxAvatar.ImageLocation = imageUrl;
@@ -188,23 +189,36 @@ namespace PhoneBookApp.View
             string email = txtEmail.Text;
             string imageUrl = picBoxAvatar.ImageLocation;
 
-            if (CurrentContact == null)
-                CurrentContact = SaveContactInfo(firstName, lastName, email, imageUrl);
-            else
-                CurrentContact = SaveContactInfo(CurrentContact, firstName, lastName, email, imageUrl);
 
-            PhoneBookForm.OnEditContact(CurrentContact);
-
-
-            for(int i = 0; i < txtPhoneNumbers.Count; i++)
+            try
             {
-                PhoneNumbers[i].Number = txtPhoneNumbers[i].Text;
-                PhoneNumbers[i].Label = cmbBoxPhoneLabels[i].Text;
-            }
-            PhoneBookForm.OnUpdatePhone(CurrentContact, PhoneNumbers);
+                if (CurrentContact == null)
+                    CurrentContact = SaveContactInfo(firstName, lastName, email, imageUrl);
+                else
+                {
+                    CurrentContact = SaveContactInfo(CurrentContact, firstName, lastName, email, imageUrl);
+                    PhoneBookForm.OnEditContact(CurrentContact);
+                }
 
-            Dispose();
-            PhoneBookForm.OnSaveContact();
+                for (int i = 0; i < txtPhoneNumbers.Count; i++)
+                {
+                    PhoneNumbers[i].Number = txtPhoneNumbers[i].Text;
+                    PhoneNumbers[i].Label = cmbBoxPhoneLabels[i].Text;
+                }
+                PhoneBookForm.OnUpdatePhone(CurrentContact, PhoneNumbers);
+
+                Dispose();
+                PhoneBookForm.OnSaveContact();
+            }
+            catch (DuplicateContactFullNameException ex)
+            {
+                MessageBox.Show(ex.Message, ex.Title);
+            }
+            catch (EmptyContactCredientalsException ex)
+            {
+                MessageBox.Show(ex.Message, ex.Title);
+            }
+
         }
 
         private void picBoxDeleteContact_Click(object sender, EventArgs e)
@@ -212,11 +226,25 @@ namespace PhoneBookApp.View
             PhoneBookForm.OnDeleteContact(CurrentContact);
             Dispose();
         }
-        private void ClearInputs()
+
+        private void addRowPicBox_Click(object sender, EventArgs e)
         {
-            txtFirstName.Clear();
-            txtLastName.Clear();
-            //txtMskPhone1.Clear();
+            AddPhoneRow();
+        }
+
+        private void picBoxAvatar_MouseLeave(object sender, EventArgs e)
+        {
+            //picBoxEditAvatar.Visible = false;
+        }
+
+        private void picBoxAvatar_MouseEnter(object sender, EventArgs e)
+        {
+            // picBoxEditAvatar.Visible = true;
+        }
+
+        private void picBoxEditAvatar_Click(object sender, EventArgs e)
+        {
+            PickAvatarImage();
         }
     }
 }

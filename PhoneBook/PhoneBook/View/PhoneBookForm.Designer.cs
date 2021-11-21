@@ -100,6 +100,7 @@ namespace PhoneBookApp.View
             // 
             this.filwToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.newToolStripMenuItem});
+            this.filwToolStripMenuItem.Enabled = false;
             this.filwToolStripMenuItem.Name = "filwToolStripMenuItem";
             this.filwToolStripMenuItem.Size = new System.Drawing.Size(46, 24);
             this.filwToolStripMenuItem.Text = "File";
@@ -185,12 +186,12 @@ namespace PhoneBookApp.View
             this.Controls.Add(this.txtSearchBox);
             this.Controls.Add(this.addContactPicBox);
             this.Controls.Add(this.menuStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximizeBox = false;
             this.Name = "PhoneBookForm";
             this.Text = "Phone book";
-            this.Load += new System.EventHandler(this.PhoneBookForm_Load);
             this.EnabledChanged += new System.EventHandler(this.Form1_EnabledChanged);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
